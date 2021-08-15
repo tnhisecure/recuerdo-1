@@ -1,0 +1,1027 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script src="allpassword.js">
+
+  </script>
+  <link rel="shortcut icon" href="brain.jpg" type="image/x-icon">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css">
+  <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+  <script src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $('#customers').DataTable();
+    });
+  </script>
+  <style>
+    body {
+      font-family: "Lato", sans-serif;
+    }
+
+    /* Fixed sidenav, full height */
+    .sidenav {
+      height: 100%;
+      width: 250px;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      background-color: #111;
+      overflow-x: hidden;
+      padding-top: 20px;
+    }
+
+    /* Style the sidenav links and the dropdown button */
+    .sidenav a,
+    .dropdown-btn {
+      padding: 6px 8px 6px 16px;
+      text-decoration: none;
+      font-size: 20px;
+      color: #818181;
+      display: block;
+      border: none;
+      background: none;
+      width: 100%;
+      text-align: left;
+      cursor: pointer;
+      outline: none;
+    }
+
+    /* On mouse-over */
+    .sidenav a:hover,
+    .dropdown-btn:hover {
+      color: #f1f1f1;
+    }
+
+    /* Main content */
+    .main {
+      margin-left: 250px;
+      /* Same as the width of the sidenav */
+      font-size: 20px;
+      /* Increased text to enable scrolling */
+      padding: 0px 10px;
+    }
+
+    /* Add an active class to the active dropdown button */
+    .active {
+      background-color: green;
+      color: white;
+    }
+
+    /* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
+    .dropdown-container {
+      display: none;
+      background-color: #262626;
+      padding-left: 8px;
+    }
+
+    /* Optional: Style the caret down icon */
+    .fa-caret-down {
+      float: right;
+      padding-right: 8px;
+    }
+
+    /* Some media queries for responsiveness */
+    @media screen and (max-height: 450px) {
+      .sidenav {
+        padding-top: 15px;
+      }
+
+      .sidenav a {
+        font-size: 18px;
+      }
+    }
+
+    #customers {
+      font-family: Arial, Helvetica, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    #customers td,
+    #customers th {
+      border: 1px solid #ddd;
+      padding: 8px;
+    }
+
+    #customers tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+
+    #customers tr:hover {
+      background-color: #ddd;
+    }
+
+    #customers th {
+      padding-top: 12px;
+      padding-bottom: 12px;
+      text-align: left;
+      background-color: #04AA6D;
+      color: white;
+    }
+
+    .blinking {
+      animation: blinkingText 1.2s infinite;
+    }
+
+    @keyframes blinkingText {
+      0% {
+        color: #000;
+      }
+
+      49% {
+        color: #000;
+      }
+
+      60% {
+        color: transparent;
+      }
+
+      99% {
+        color: transparent;
+      }
+
+      100% {
+        color: #000;
+      }
+    }
+
+    .button {
+
+      display: inline-block;
+      padding: 10px 20px;
+      font-size: 15px;
+      cursor: pointer;
+      text-align: center;
+      text-decoration: none;
+      outline: none;
+      color: #fff;
+      background-color: #04AA6D;
+      border: none;
+      border-radius: 15px;
+      box-shadow: 0 9px #999;
+    }
+
+    .button:hover {
+      background-color: #8e8d3e
+    }
+
+    .button:active {
+      background-color: #04AA6D;
+      box-shadow: 0 5px #666;
+      transform: translateY(4px);
+    }
+  </style>
+  <title>RECUERDO</title>
+</head>
+
+<body>
+
+  <div class="sidenav">
+    <img src="brain.jpg" width="250px" height="150 px">
+    <a href="welcome.html">DASHBOARD</a>
+
+    <a href="contacts.html">CONTACTS</a>
+    <button class="dropdown-btn">HOUSE
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-container">
+      <a href="thakur.html">THAKUR</a>
+      <a href="dolil.html">DOLIL</a>
+      <a href="khajna.html">KHAJNA</a>
+      <a href="housetax.html">HOLDING-TAX</a>
+      <a href="key.html">KEY</a>
+      <a href="rent.html">RENT</a>
+      <button class="dropdown-btn">PUJA CHANDA
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-container">
+        <a href="kalipuja.html">KALI PUJA</a>
+        <a href="durgapuja.html">DURGA PUJA</a>
+
+      </div>
+      <button class="dropdown-btn">MAINTENANCE
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-container">
+        <a href="wooden.html">WOODEN</a>
+        <a href="grill.html">GRILL</a>
+        <a href="civil.html">CIVIL</a>
+        <a href="plumber.html">PLUMBER</a>
+        <a href="electricity.html">ELECTRICITY</a>
+
+      </div>
+    </div>
+    <button class="dropdown-btn">FINANCIAL
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-container">
+      <a href="bank.html">BANK</a>
+      <a href="po.html">POST-OFFICE</a>
+      <a href="mf.html">MUTUAL FUND</a>
+      <a href="it.html">INCOME-TAX</a>
+      <a href="mpg.html">MPG-NCD</a>
+      <a href="ornaments.html">ORNAMENTS</a>
+      <a href="badd.html">BAD DEBT</a>
+      <a href="insurance.html">INSURANCE</a>
+      <a href="pension.html">PENSION</a>
+      <a href="earning.html">EARNING</a>
+      <a href="expances.html">EXPANCES</a>
+      <a href="planning.html">PLANNING</a>
+    </div>
+    <button class="dropdown-btn">MEDICAL
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-container">
+      <a href="hospital.html">HOSPITAL</a>
+      <a href="medicine.html">MEDICINE</a>
+      <a href="aid.html">FIRST AID KIT</a>
+    </div>
+    <button class="dropdown-btn">IDENTITY
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-container">
+      <a href="bc.html">BIRTH CERTIFICATE</a>
+      <a href="bg.html">BLOOD GROUP</a>
+      <a href="pan.html">PAN CARD</a>
+      <a href="aadhar.html">AADHAR CARD</a>
+      <a href="vc.html">VOTER CARD</a>
+      <a href="passport.html">PASSPORT</a>
+      <a href="dl.html">DRIVING LICENCE</a>
+      <a href="rc.html">RATION CARD</a>
+      <a href="sd.html">SCHOOL DOCS</a>
+      <a href="mc.html">MEMBERSHIP CARD</a>
+      <a href="pp.html">PASSPORT PHOTO</a>
+      <a href="dc.html">DEATH CERTIFICATE</a>
+    </div>
+    <button class="dropdown-btn">EX-SERVICE
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-container">
+      <a href="ma.html">MA</a>
+      <a href="baba.html">BABA</a>
+    </div>
+    <button class="dropdown-btn">FURNITURE
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-container">
+      <a href="electronic.html">ELECTRONIC</a>
+      <a href="nonelec.html">NON-ELECTRONIC</a>
+      <a href="vehicels.html">VEHICELS</a>
+      <a href="whatisinit.html">WHAT IS IN IT?</a>
+    </div>
+    <button class="dropdown-btn">LEGAL
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-container">
+      <a href="loan.html">LOAN</a>
+      <a href="court.html">MY COURT CASES</a>
+      <a href="will.html">WILL</a>
+    </div>
+    <a href="p&v.html">PHOTOS & VIDEOS</a>
+    <a href="event.html">EVENTS</a>
+    <a href="researchs.html">RESEARCHS</a>
+    <br>
+    <br>
+    <a href="logout.html">LOG OUT</a>
+  </div>
+
+  <div class="main">
+    <h2><U>
+        <CENTER>RECUERDO</CENTER>
+      </U></h2>
+    <MARQUEE>
+      <FONT COLOR="RED">I AM VERY GLAD TO ANNOUNCE YOU THAT THIS SITE 100% HOSTING AND DOMAIN RENEWAL FREE, MEANS IT IS
+      </FONT>
+      <FONT COLOR="green"><b> IMMORTAL SITE.</b></FONT>
+    </MARQUEE>
+    <hr>
+    <img src="ALCHEMIST.jpg" height=300px width=100%><br>
+    <br>
+    <CENTER><U>ALCHEMIST</U></CENTER> <BR><BR>
+      <a href="https://www.justicesptalukdarcommittee.com/InvestorList.aspx"><img src="justicesptalukdarcommittee.jpg"></a><br><br>
+    <table id="customers" class="display" style="width:100%">
+      <thead>
+        <tr>
+          <th>STATUS</th>
+          <th>DEPOSIT STATUS</th>
+          <th>APPLICATION NO</th>
+          <th>CUST. ID NO<br>
+            justicesptalukdarcommittee</th>
+          <th>1st APPLICANT NAME</th>
+          <th>2nd APPLICANT NAME</th>
+          <th>DATE OF DEPOSIT<BR>
+            YYYY/MM/DD</th>
+          <th>MATURITY DATE<BR>
+            YYYY/MM/DD</th>
+          <th>DEPOSIT AMT</th>
+          <th>MATURITY AMT</th>
+          <th>OFFICE PAID CHEQUES</th>
+          <th>OFFICE HAVE CHEQUES</th>
+          <TH>NOT GET CHEQUES</TH>
+          <th>BANK MATURITY CHEQUES</th>
+          <th>BANK MATURITY CHEQUES SUBMITTED AT OFFICE</th>
+
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>ORG CER</td>
+          <td>FIXED</td>
+          <td><a href="TA01370977_protected.pdf">TA01370977</a></td>
+          <td><a href="Investor Details-TLL0414278.pdf">TLL0414278</a></td>
+          <td>JAYANTA DUTTA</td>
+          <td>MANORANJAN DUTTA</td>
+          <td>2013/12/19</td>
+          <td>2019/12/19</td>
+          <td>100000</td>
+          <td>200000</td>
+          <td>NIL</td>
+          <td>NIL</td>
+          <td>NIL</td>
+          <td>NIL</td>
+          <td>NIL</td>
+          <script>
+            var a=100000;
+            var a1=200000;
+          </script>
+
+        </tr>
+        <tr>
+          <td>ORG CER</td>
+          <td>FIXED</td>
+          <td><a href="TA05237214_protected.pdf">TA05237214</a></td>
+          <td><a href="Investor Details-TLL0414277.pdf">TLL0414277</a></td>
+          <td>JAYANTA DUTTA</td>
+          <td>MANORANJAN DUTTA</td>
+          <td>2013/12/19</td>
+          <td>2019/12/19</td>
+          <td>100000</td>
+          <td>200000</td>
+          <td>NIL</td>
+          <td>NIL</td>
+          <td>NIL</td>
+          <td>NIL</td>
+          <td>NIL</td>
+          <script>
+            var b=100000;
+            var b1=200000;
+          </script>
+
+        </tr>
+        <tr>
+          <td>ORG CER</td>
+          <td>FIXED-AE(SPTC)</td>
+          <td><a href="TA01370997_protected.pdf">TA01370997</a></td>
+          <td>TCC0055762</td>
+          <td>MANORANJAN&nbspDUTTA</td>
+          <td>SATHI RANI DUTTA</td>
+          <td>2013/06/28</td>
+          <td>2017/05/25</td>
+          <td>50000</td>
+          <td>100000</td>
+          <td>NIL</td>
+          <td>NIL</td>
+          <td>NIL</td>
+          <td>NIL</td>
+          <td>NIL</td>
+          <script>
+            var c=50000;
+            var c1=100000;
+          </script>
+
+        </tr>
+        <tr>
+          <td>ORG CER</td>
+          <td>FIXED-AE(SPTC)</td>
+          <td><a href="TA01370990_protected.pdf">TA01370990</a></td>
+          <td>TCC0055760</td>
+          <td>SATHI RANI DUTTA</td>
+          <td>MANORANJAN DUTTA</td>
+          <td>2013/06/28</td>
+          <td>2017/06/17</td>
+          <td>75000</td>
+          <td>150000</td>
+          <td>NIL</td>
+          <td>NIL</td>
+          <td>NIL</td>
+          <td>NIL</td>
+          <td>NIL</td>
+          <script>
+            var d=75000;
+            var d1=150000;
+          </script>
+
+        </tr>
+        <tr>
+          <td>ORG CER</td>
+          <td>FIXED-AE(SPTC)</td>
+          <td><a href="TA01370982_protected.pdf">TA01370982</a></td>
+          <td>TCC0055757</td>
+          <td>SATHI RANI DUTTA</td>
+          <td>JAYANTA DUTTA</td>
+          <td>2013/06/28</td>
+          <td>2017/08/14</td>
+          <td>100000</td>
+          <td>200000</td>
+          <td>NIL</td>
+          <td>NIL</td>
+          <td>NIL</td>
+          <td>NIL</td>
+          <td>NIL</td>
+          <script>
+            var e=100000;
+            var e1=200000;
+          </script>
+
+        </tr>
+        <tr>
+          <td>ORG CER</td>
+          <td>FIXED</td>
+          <td><a href="TA01370992_protected.pdf">TA01370992</a></td>
+          <td><a href="Investor Details-TCC0055761.pdf">TCC0055761</a></td>
+          <td>SATHI RANI DUTTA</td>
+          <td>MANORANJAN DUTTA</td>
+          <td>2013/06/28</td>
+          <td>2020/07/13</td>
+          <td>100000</td>
+          <td>300000</td>
+          <td>NIL</td>
+          <td>NIL</td>
+          <td>NIL</td>
+          <td>NIL</td>
+          <td>NIL</td>
+          <script>
+            var f=100000;
+            var f1=300000;
+          </script>
+        </tr>
+        <tr>
+          <td>ORG CER</td>
+          <td>FIXED</td>
+          <td><a href="TA01370976_protected.pdf">TA01370976</a></td>
+          <td><a href="Investor Details-TCC0055754.pdf">TCC0055754</a></td>
+          <td>SATHI RANI DUTTA</td>
+          <td>JAYANTA DUTTA</td>
+          <td>2013/06/28</td>
+          <td>2020/09/15</td>
+          <td>100000</td>
+          <td>300000</td>
+          <td>NIL</td>
+          <td>NIL</td>
+          <td>NIL</td>
+          <td>NIL</td>
+          <td>NIL</td>
+          <script>
+            var g=100000;
+            var g1=300000;
+          </script>
+        </tr>
+        <tr>
+          <td>ORG CER</td>
+          <td>FIXED</td>
+          <td><a href="TA01370986_protected.pdf">TA01370986</a></td>
+          <td>TC00062083</td>
+          <td>JAYANTA DUTTA</td>
+          <td>MANORANJAN DUTTA</td>
+          <td>2013/06/28</td>
+          <td>2027/10/09</td>
+          <td>20000</td>
+          <td>200000</td>
+          <td>NIL</td>
+          <td>NIL</td>
+          <td>NIL</td>
+          <td>NIL</td>
+          <td>NIL</td>
+          <script>
+            var h=20000;
+            var h1=200000;
+          </script>
+
+        </tr>
+        <tr>
+          <td>ORG CER</td>
+          <td>FIXED</td>
+          <td><a href="TA01370983_protected.pdf">TA01370983</a></td>
+          <td>TCC0055758</td>
+          <td>JAYANTA DUTTA</td>
+          <td>MANORANJAN DUTTA</td>
+          <td>2013/06/28</td>
+          <td>2027/01/04</td>
+          <td>50000</td>
+          <td>500000</td>
+          <td>NIL</td>
+          <td>NIL</td>
+          <td>NIL</td>
+          <td>NIL</td>
+          <td>NIL</td>
+          <script>
+            var i=50000;
+            var i1=500000;
+          </script>
+        </tr>
+        <tr>
+          <td>ORG CER</td>
+          <td>FIXED</td>
+          <td><a href="TA01370965_protected.pdf">TA01370965</a></td>
+          <td>TCC0055752</td>
+          <td>JAYANTA DUTTA</td>
+          <td>MANORANJAN DUTTA</td>
+          <td>2013/06/28</td>
+          <td>2027/02/01</td>
+          <td>50000</td>
+          <td>500000</td>
+          <td>NIL</td>
+          <td>NIL</td>
+          <td>NIL</td>
+          <td>NIL</td>
+          <td>NIL</td>
+          <script>
+            var j=50000;
+            var j1=500000;
+          </script>
+        </tr>
+        <tr>
+          <td>ORG CER</td>
+          <td>FIXED</td>
+          <td><a href="TA01379981_protected.pdf">TA01370981</a></td>
+          <td>TCC0055756</td>
+          <td>JAYANTA DUTTA</td>
+          <td>SATHI RANI DUTTA</td>
+          <td>2013/06/28</td>
+          <td>2027/05/14</td>
+          <td>30000</td>
+          <td>300000</td>
+          <td>NIL</td>
+          <td>NIL</td>
+          <td>NIL</td>
+          <td>NIL</td>
+          <td>NIL</td>
+          <script>
+            var k=30000;
+            var k1=300000;
+          </script>
+        </tr>
+        <tr>
+          <td>ORG CER</td>
+          <td>FIXED</td>
+          <td><a href="TA01370979_protected.pdf">TA01370979</a></td>
+          <td>TCC0055755</td>
+          <td>JAYANTA DUTTA</td>
+          <td>SATHI RANI DUTTA</td>
+          <td>2013/06/28</td>
+          <td>2027/06/17</td>
+          <td>30000</td>
+          <td>300000</td>
+          <td>NIL</td>
+          <td>NIL</td>
+          <td>NIL</td>
+          <td>NIL</td>
+          <td>NIL</td>
+          <script>
+            var l=30000;
+            var l1=300000;
+          </script>
+        </tr>
+        <tr>
+          <td>ORG CER</td>
+          <td>FIXED</td>
+          <td><a href="TA01370967_protected.pdf">TA01370967</a></td>
+          <td><a href="Investor Details-TCC0055754.pdf">TCC0055753</a></td>
+          <td>SATHI RANI DUTTA</td>
+          <td>JAYANTA DUTTA</td>
+          <td>2013/06/28</td>
+          <td>2027/07/13</td>
+          <td>50000</td>
+          <td>500000</td>
+          <td>NIL</td>
+          <td>NIL</td>
+          <td>NIL</td>
+          <td>NIL</td>
+          <td>NIL</td>
+          <script>
+            var m=50000;
+            var m1=500000;
+          </script>
+        </tr>
+        <tr>
+          <td>ORG CER</td>
+          <td>FIXED</td>
+          <td><a href="TA01370988_protected.pdf">TA01370988</a></td>
+          <td>TCC0055759</td>
+          <td>JAYANTA DUTTA</td>
+          <td>MANORANJAN DUTTA</td>
+          <td>2013/06/28</td>
+          <td>2027/08/14</td>
+          <td>30000</td>
+          <td>300000</td>
+          <td>NIL</td>
+          <td>NIL</td>
+          <td>NIL</td>
+          <td>NIL</td>
+          <td>NIL</td>
+          <script>
+            var n=30000;
+            var n1=300000;
+          </script>
+        </tr>
+        <tr>
+          <td>ORG CER</td>
+          <td>FIXED</td>
+          <td><a href="TA01370987_protected.pdf">TA01370987</a></td>
+          <td>TC00062018</td>
+          <td>JAYANTA DUTTA</td>
+          <td>MANORANJAN DUTTA</td>
+          <td>2013/06/28</td>
+          <td>2027/09/15</td>
+          <td>15000</td>
+          <td>150000</td>
+          <td>NIL</td>
+          <td>NIL</td>
+          <td>NIL</td>
+          <td>NIL</td>
+          <td>NIL</td>
+          <script>
+            var o=15000;
+            var o1=150000;
+          </script>
+
+        </tr>
+        <tr>
+          <td>ORG CER</td>
+          <td>FIXED</td>
+          <td><a href="TA01370985_protected.pdf">TA01370985</a></td>
+          <td>TC00062017</td>
+          <td>JAYANTA DUTTA</td>
+          <td>NIL</td>
+          <td>2013/06/28</td>
+          <td>2026/11/02</td>
+          <td>20000</td>
+          <td>200000</td>
+          <td>NIL</td>
+          <td>NIL</td>
+          <td>NIL</td>
+          <td>NIL</td>
+          <td>NIL</td>
+          <script>
+            var p=20000;
+            var p1=200000;
+          </script>
+        </tr>
+        <tr>
+          <td>ORG CER</td>
+          <td>FIXED</td>
+          <td><a href="TA01370984_protected.pdf">TA01370984</a></td>
+          <td>TC00062016</td>
+          <td>JAYANTA DUTTA</td>
+          <td>NIL</td>
+          <td>2013/06/28</td>
+          <td>2026/11/14</td>
+          <td>10000</td>
+          <td>100000</td>
+          <td>NIL</td>
+          <td>NIL</td>
+          <td>NIL</td>
+          <td>NIL</td>
+          <td>NIL</td>
+          <script>
+            var q=10000;
+            var q1=100000;
+          </script>
+        </tr>
+        <tr>
+          <td>ORG CER</td>
+          <td>FIXED</td>
+          <td><a href="TA01370980_protected.pdf">TA01370980</a></td>
+          <td>TC00061934</td>
+          <td>JAYANTA DUTTA</td>
+          <td>ANGANA DUTTA</td>
+          <td>2013/06/28</td>
+          <td>2025/11/11</td>
+          <td>10000</td>
+          <td>100000</td>
+          <td>NIL</td>
+          <td>NIL</td>
+          <td>NIL</td>
+          <td>NIL</td>
+          <td>NIL</td>
+          <script>
+            var r=10000;
+            var r1=100000;
+          </script>
+        </tr>
+        <tr>
+          <td>ORG CER</td>
+          <td>FIXED</td>
+          <td><a href="TA01370978_protected.pdf">TA01370978</a></td>
+          <td>TC00061933</td>
+          <td>JAYANTA DUTTA</td>
+          <td>ANGANA DUTTA</td>
+          <td>2013/06/28</td>
+          <td>2025/11/22</td>
+          <td>10000</td>
+          <td>100000</td>
+          <td>NIL</td>
+          <td>NIL</td>
+          <td>NIL</td>
+          <td>NIL</td>
+          <td>NIL</td>
+          <script>
+            var s=10000;
+            var s1=100000;
+          </script>
+        </tr>
+        
+        <tr>
+          <td>ORG CER</td>
+          <td>MIS</td>
+          <td><a href="TA02189306_protected.pdf">TA02189306</a></td>
+          <td><a href="Investor Details-TCC0055754.pdf">TYY0082054</a></td>
+          <td>JAYANTA DUTTA</td>
+          <td>SATHI RANI DUTTA</td>
+          <td>2015/11/15</td>
+          <td>2018/11/15</td>
+          <td>200000</td>
+          <td>200000</td>
+          <td>NIL</td>
+          <td><a href="TYY0082054.pdf">1ST/2ND</a></td>
+          <td>3RD-36TH</td>
+          <td>NIL</td>
+          <td>NIL</td>
+          <script>
+            var t=200000;
+            var t1=200000;
+          </script>
+        </tr>
+        <tr>
+          <td>ORG CER</td>
+          <td>MIS</td>
+          <td><a href="TA02189305_protected.pdf">TA02189305</a></td>
+          <td><a href="Investor Details-TYY0082053.pdf">TYY0082053</a></td>
+          <td>SHRABONI DUTTA</td>
+          <td>JAYANTA DUTTA</td>
+          <td>2015/12/11</td>
+          <td>2018/12/11</td>
+          <td>400000</td>
+          <td>400000</td>
+          <td>NIL</td>
+          <td><a href="TYY0082053.pdf">1ST</a></td>
+          <td>2ND-36TH</td>
+          <td>NIL</td>
+          <td>NIL</td>
+          <script>
+            var u=400000;
+            var u1=400000;
+          </script>
+        </tr>
+        <tr>
+          <td>XEROX CER</td>
+          <td>MIS-AE(SPTC)</td>
+          <td><a href="TA02272922_protected.pdf">TA02272922</a></td>
+          <td>TYY0023669</td>
+          <td>MANORANJAN DUTTA</td>
+          <td>JAYANTA DUTTA</td>
+          <td>2013/11/25</td>
+          <td>2016/11/25</td>
+          <td>200000</td>
+          <td>200000</td>
+          <td>21ST</td>
+          <td><a href="TYY0023669.pdf">22ND/23RD/24TH</a><BR><a href="TYY0023669-2.pdf">25TH/26TH</a></td>
+          <td>27TH-36TH</td>
+          <td>NIL</td>
+          <td>NIL</td>
+          <script>
+            var v=200000;
+            var v1=200000;
+          </script>
+
+        </tr>
+        <tr>
+          <td>XEROX CER</td>
+          <td>MIS-AE(SPTC)</td>
+          <td><a href="TA02195259_protected.pdf">TA02195259</a></td>
+          <td>TYY0024732</td>
+          <td>MANORANJAN DUTTA</td>
+          <td>JAYANTA DUTTA</td>
+          <td>2013/12/31</td>
+          <td>2016/12/31</td>
+          <td>500000</td>
+          <td>500000</td>
+          <td>20TH</td>
+          <td><a href="TYY0024732.pdf">21ST/22ND/23RD</a><br><a href="TYY0024732-2.pdf">24TH/25TH</a> </td>
+          <td>26TH-36TH</td>
+          <td>NIL</td>
+          <td>NIL</td>
+          <script>
+            var w=500000;
+            var w1=500000;
+          </script>
+        </tr>
+        <tr>
+          <td>ORG CHEQUE</td>
+          <td>FIXED</td>
+          <td>TA01370996</td>
+          <td><a href="Investor Details-TCC0055658.pdf">TCC0055658</a></td>
+          <td>MANORANJAN DUTTA</td>
+          <TD>SATHI RANI DUTTA</TD>
+          <td>2009/10/16</td>
+          <td>2015/10/16</td>
+          <td>50000</td>
+          <td>104000</td>
+
+          <td>NIL</td>
+          <td>NIL</td>
+          <td>NIL</td>
+          <td><a href="PNB430508_protected.pdf">430508</a></td>
+          <td>NIL</td>
+          <script>
+            var x=50000;
+            var x1=104000;
+          </script>
+
+
+        </tr>
+        <tr>
+          <td>ORG CER</td>
+          <td>MIS</td>
+          <td><a href="TA02189309_protected.pdf">TA02189309</a></td>
+          <td><a href="Investor Details-TYY0082056.pdf">TYY0082056</a></td>
+          <td>MANORANJAN DUTTA</td>
+          <td>JAYANTA DUTTA</td>
+          <td>2015/06/22</td>
+          <td>2018/06/22</td>
+          <td>500000</td>
+          <td>500000</td>
+
+          <td>NIL</td>
+          <td><a href="TYY0082056-1.pdf">1ST/2ND/3RD</a><br><a href="TYY0082056-2.pdf">4TH/5TH</a><br><a
+              href="TYY0082056-3.pdf">6TH/7TH</a></td>
+          <td>8TH-36TH</td>
+          <td>NIL</td>
+          <td>NIL</td>
+          <script>
+            var y=500000;
+            var y1=500000;
+          </script>
+
+
+        </tr>
+        <tr>
+          <td>ORG CER</td>
+          <td>MIS</td>
+          <td><a href="TA01370970_protected.pdf">TA01370970</a></td>
+          <td><a href="Investor Details-TYY0082055.pdf">TYY0082055</a></td>
+          <td>MANORANJAN DUTTA</td>
+          <td>JAYANTA DUTTA</td>
+          <td>2015/06/10</td>
+          <td>2018/06/10</td>
+          <td>156000</td>
+          <td>156000</td>
+
+          <td>NIL</td>
+          <td><a href="TYY0082055-1.pdf">1ST/2ND/3RD</a><br><a href="TYY0082055-2.pdf">4TH/5TH</a><br><a
+              href="TYY0082055-3.pdf">6TH/7TH</a></td>
+          <td>8TH-36TH</td>
+          <td>NIL</td>
+          <td>NIL</td>
+          <script>
+            var z=156000;
+            var z1=156000;
+          </script>
+
+
+        </tr>
+        <tr>
+          <td>XEROX CHEQUE</td>
+          <td>FIXED-AE(SPTC)</td>
+          <td>TA01370966</td>
+          <td>TCC0055684</td>
+          <td>JAYANTA DUTTA</td>
+          <td>MANORANJAN DUTTA</td>
+          <td>2009/04/24</td>
+          <td>2015/04/24</td>
+          <td>50000</td>
+          <td>104000</td>
+          <td>NIL</td>
+          <td>NIL</td>
+          <td>NIL</td>
+          <td>NIL</td>
+          <td><a href="cheques_protected.pdf">753498</a></td>
+          <script>
+            var aa=50000;
+            var aa1=104000;
+          </script>
+
+        </tr>
+        <tr>
+          <td>XEROX CHEQUE</td>
+          <td>MIS</td>
+          <td>RE02323674<BR>(OLD)</td>
+          <td><a href="Investor Details-RXX0048838.pdf">RXX0048838</a></td>
+          <td>MANORANJAN DUTTA</td>
+          <td>SATHI RANI DUTTA</td>
+          <td>2011/11/24</td>
+          <td>2014/11/24</td>
+          <td>120000</td>
+          <td>120000</td>
+          <td>ALL</td>
+          <td>NIL</td>
+          <td>NIL</td>
+          <td>NIL</td>
+          <td><a href="RXX0048838 XC.pdf">840873</a></td>
+          <script>
+            var ab=120000;
+            var ab1=120000;
+          </script>
+
+
+        </tr>
+
+      </tbody>
+      </tbody>
+      <tfoot>
+        <tr>
+
+          <th>STATUS</th>
+          <th>DEPOSIT STATUS</th>
+          <th>APPLICATION NO</th>
+          <th>CUST. ID NO</th>
+          <th>1st APPLICANT NAME</th>
+          <th>2nd APPLICANT NAME</th>
+          <th>DATE OF DEPOSIT<BR>
+            YYYY/MM/DD</th>
+          <th>MATURITY DATE<BR>
+            YYYY/MM/DD</th>
+          <th>DEPOSIT AMT</th>
+          <th>MATURITY AMT</th>
+          <th>OFFICE PAID CHEQUES</th>
+          <th>OFFICE HAVE CHEQUES</th>
+          <TH>NOT GET CHEQUES</TH>
+          <th>BANK MATURITY CHEQUES</th>
+          <th>BANK MATURITY CHEQUES SUBMITTED AT OFFICE</th>
+
+        </tr>
+      </tfoot>
+    </table><BR><BR>
+    <script>
+var A =(a+b+c+d+e+f+g+h+i+j+k+l+m+n+o+p+q+r+s+t+u+v+w+x+y+z+aa+ab);
+var B =(a1+b1+c1+d1+e1+f1+g1+h1+i1+j1+k1+l1+m1+n1+o1+p1+q1+r1+s1+t1+u1+v1+w1+x1+y1+z1+aa1+ab1);
+      document.write("TOTAL DEPOSIT AMOUNT RS " + A +"<br>");
+      document.write(" TOTAL WITHDRAWL AMOUNT RS " + B );
+    </script>
+     <BR>
+   
+    <br><br>
+    &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
+    <input type="button" class="button" value="Print Table" onclick="myApp.printTable()" />
+    &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
+    &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
+    &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
+    &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
+    &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
+    &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
+    &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
+    <input type="button" class="button" value="Print Table" onclick="myApp.printTable()" />
+    </p>
+
+
+    <script src="dropdown.js"></script>
+
+  </div>
+  <br>
+  <br>
+  <br>
+  
+  
+  
+  <br>
+  <hr>
+  <p style="font-size: 10px;" align="right"><span class="blinking">Version 1.0.2</span></p>
+  
+  <center>
+    <p style="font-size: 13px;">&copy;2021-22 All Rights Reserved by Recuerdo</p>
+  </center>
+  
+  </body>
+
+
+<script>
+  var myApp = new function () {
+    this.printTable = function () {
+      var customers = document.getElementById('customers');
+      var win = window.open('', '', 'height=700,width=700');
+      win.document.write(customers.outerHTML);
+      win.document.close();
+      win.print();
+    }
+  }
+</script>
+
+
+
+
+</html>
