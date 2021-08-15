@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>RECUERDO</title>
+    <link rel="shortcut icon" href="brain.jpg" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   
+    <link rel="stylesheet" href="style.css" />
+    <!-- Include JS File Here -->
+    <script src="login.js"></script>
+    <style>
+.blinking{
+    animation:blinkingText 1.2s infinite;
+}
+@keyframes blinkingText{
+    0%{     color: #000;    }
+    49%{    color: #000; }
+    60%{    color: transparent; }
+    99%{    color:transparent;  }
+    100%{   color: #000;    }
+}
+
+
+
+        </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="main">
+            <h2>Recuerdo Login Form</h2>
+            <form id="form_id" method="post" name="myform">
+                <label>User Name :</label>
+                <input type="password" name="username" id="username" />
+                <label>Password :</label>
+                <input type="password" name="password" id="password" />
+                <input type="button" value="Login" id="submit" onclick="validate()" />
+            </form>
+            <span><b class="note">Note : </b>Please Enter Valid Username and Password.
+            </span>
+        </div>
+   
+   
+    </div>
+    
+    <p style="font-size: 10px;" align="right"><span class="blinking">Version 1.0.2</span></p>
+    <center>
+        <p style="font-size: 13px;">&copy;2021-22 All Rights Reserved by Recuerdo</p>
+    </center>
+</div>
+</body>
+
+</html>

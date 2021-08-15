@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+    a=prompt("Enter Password");
+           if(a==7662)
+            alert("Go Ahead....");
+            
+        else if(a!=7662)
+            window.location="error.html";
+    </script>
+  <link rel="shortcut icon" href="brain.jpg" type="image/x-icon">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {
+  font-family: "Lato", sans-serif;
+}
+
+/* Fixed sidenav, full height */
+.sidenav {
+  height: 100%;
+  width: 250px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+/* Style the sidenav links and the dropdown button */
+.sidenav a, .dropdown-btn {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #818181;
+  display: block;
+  border: none;
+  background: none;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  outline: none;
+}
+
+/* On mouse-over */
+.sidenav a:hover, .dropdown-btn:hover {
+  color: #f1f1f1;
+}
+
+/* Main content */
+.main {
+  margin-left: 250px; /* Same as the width of the sidenav */
+  font-size: 20px; /* Increased text to enable scrolling */
+  padding: 0px 10px;
+}
+
+/* Add an active class to the active dropdown button */
+.active {
+  background-color: green;
+  color: white;
+}
+
+/* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
+.dropdown-container {
+  display: none;
+  background-color: #262626;
+  padding-left: 8px;
+}
+
+/* Optional: Style the caret down icon */
+.fa-caret-down {
+  float: right;
+  padding-right: 8px;
+}
+
+/* Some media queries for responsiveness */
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+#customers {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#customers td, #customers th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#customers tr:nth-child(even){background-color: #f2f2f2;}
+
+#customers tr:hover {background-color: #ddd;}
+
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #04AA6D;
+  color: white;
+}
+.blinking{
+    animation:blinkingText 1.2s infinite;
+}
+@keyframes blinkingText{
+    0%{     color: #000;    }
+    49%{    color: #000; }
+    60%{    color: transparent; }
+    99%{    color:transparent;  }
+    100%{   color: #000;    }
+}
+
+</style>
+<title>RECUERDO</title>
+</head>
+<body>
+
+  <div class="sidenav">
+    <img src="brain.jpg" width="250px" height="150 px">
+    <a href="welcome.html">DASHBOARD</a>
+    
+    <a href="contacts.html">CONTACTS</a>
+    <button class="dropdown-btn">HOUSE
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-container">
+      <a href="thakur.html">THAKUR</a>
+      <a href="dolil.html">DOLIL</a>
+      <a href="khajna.html">KHAJNA</a>
+      <a href="housetax.html">HOLDING-TAX</a>
+      <a href="key.html">KEY</a>
+      <a href="rent.html">RENT</a>
+      <button class="dropdown-btn">PUJA CHANDA
+          <i class="fa fa-caret-down"></i>
+        </button>
+      <div class="dropdown-container">
+        <a href="kalipuja.html">KALI PUJA</a>
+        <a href="durgapuja.html">DURGA PUJA</a>
+        
+      </div>
+      <button class="dropdown-btn">MAINTENANCE
+          <i class="fa fa-caret-down"></i>
+        </button>
+      <div class="dropdown-container">
+      <a href="wooden.html">WOODEN</a>
+      <a href="grill.html">GRILL</a>
+      <a href="civil.html">CIVIL</a>
+      <a href="plumber.html">PLUMBER</a>
+      <a href="electricity.html">ELECTRICITY</a>
+      
+      </div>    
+    </div>
+    <button class="dropdown-btn">FINANCIAL 
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-container">
+      <a href="bank.html">BANK</a>
+      <a href="po.html">POST-OFFICE</a>
+      <a href="mf.html">MUTUAL FUND</a>
+      <a href="it.html">INCOME-TAX</a>
+      <a href="mpg.html">MPG-NCD</a>
+      <a href="ornaments.html">ORNAMENTS</a>
+      <a href="badd.html">BAD DEBT</a>
+      <a href="insurance.html">INSURANCE</a>
+      <a href="pension.html">PENSION</a>
+      <a href="earning.html">EARNING</a>
+      <a href="expances.html">EXPANCES</a>
+      <a href="planning.html">PLANNING</a>
+     </div>
+    <button class="dropdown-btn">MEDICAL 
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-container">
+      <a href="hospital.html">HOSPITAL</a>
+      <a href="medicine.html">MEDICINE</a>
+      <a href="aid.html">FIRST AID KIT</a>
+    </div>
+    <button class="dropdown-btn">IDENTITY 
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-container">
+      <a href="bc.html">BIRTH CERTIFICATE</a>
+      <a href="bg.html">BLOOD GROUP</a>
+      <a href="pan.html">PAN CARD</a>
+      <a href="aadhar.html">AADHAR CARD</a>
+      <a href="vc.html">VOTER CARD</a>
+      <a href="passport.html">PASSPORT</a>
+      <a href="dl.html">DRIVING LICENCE</a>
+      <a href="rc.html">RATION CARD</a>
+      <a href="sd.html">SCHOOL DOCS</a>
+      <a href="mc.html">MEMBERSHIP CARD</a>
+      <a href="pp.html">PASSPORT PHOTO</a>
+      <a href="dc.html">DEATH CERTIFICATE</a>
+    </div>
+    <button class="dropdown-btn">EX-SERVICE 
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-container">
+      <a href="ma.html">MA</a>
+      <a href="baba.html">BABA</a>
+    </div>
+    <button class="dropdown-btn">FURNITURE 
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-container">
+      <a href="electronic.html">ELECTRONIC</a>
+      <a href="nonelec.html">NON-ELECTRONIC</a>
+      <a href="vehicels.html">VEHICELS</a>
+      <a href="whatisinit.html">WHAT IS IN IT?</a>
+    </div>
+    <button class="dropdown-btn">LEGAL
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-container">
+      <a href="loan.html">LOAN</a>
+      <a href="court.html">MY COURT CASES</a>
+      <a href="will.html">WILL</a>
+    </div>
+    <a href="p&v.html">PHOTOS & VIDEOS</a>
+     <a href="event.html">EVENTS</a>
+    <a href="researchs.html">RESEARCHS</a>
+    <br>
+    <br>
+    <a href="logout.html">LOG OUT</a>
+  </div>
+  
+  <div class="main">
+    
+    <h2><U><CENTER>RECUERDO</CENTER></U></h2>
+    <MARQUEE><FONT COLOR="RED">I AM VERY GLAD TO ANNOUNCE YOU THAT THIS SITE 100% HOSTING AND DOMAIN RENEWAL FREE, MEANS IT IS</FONT><FONT COLOR="green"><b> IMMORTAL SITE.</b></FONT></MARQUEE>
+    <hr>
+  <img src="ALCHEMIST.jpg" height=300px width=100%><br>
+  <br>
+ <CENTER><U>ALCHEMIST (Certificate Have) </U></CENTER> <BR><BR>
+  <table id="customers">
+    <tr>
+        <th>SL</th>
+      <th>DEPOSIT STATUS</th>
+      <th>APPLICATION NO</th>
+      <th>CUST. ID NO</th>
+      <th>APPLICANT&nbspNAME</th>
+      <th>DATE OF DIPOSIT<BR>
+        MM/DD/YYYY</th>
+      <th>MATURITY DATE<BR>
+        MM/DD/YYYY</th>
+      <th>DEPOSIT AMT</th>
+      <th>MATURITY AMT</th>
+      
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>FIXED</td>
+      <td><a href="TA01370977_protected.pdf">TA01370977</a></td>
+      <td>TLL0414278</td>
+      <td>JAYANTA DUTTA</td>
+      <td>12/19/2013</td>
+      <td>12/19/2019</td>
+      <td>100000</td>
+      <td>200000</td>
+      
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>FIXED</td>
+      <td><a href="TA05237214_protected.pdf">TA05237214</a></td>
+      <td>TLL0414277</td>
+      <td>JAYANTA DUTTA</td>
+      <td>12/19/2013</td>
+      <td>12/19/2019</td>
+      <td>100000</td>
+      <td>200000</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>FIXED</td>
+      <td><a href="TA01370997_protected.pdf">TA01370997</a></td>
+      <td>TCC0055762</td>
+      <td>MANORANJAN&nbspDUTTA</td>
+      <td>6/28/2013</td>
+      <td>5/25/2017</td>
+      <td>50000</td>
+      <td>100000</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>FIXED</td>
+      <td><a href="TA01370990_protected.pdf">TA01370990</a></td>
+      <td>TCC0055760</td>
+      <td>SATHI RANI DUTTA</td>
+      <td>6/28/2013</td>
+      <td>6/17/2017</td>
+      <td>75000</td>
+      <td>150000</td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td>FIXED</td>
+        <td><a href="TA01370982_protected.pdf">TA01370982</a></td>
+        <td>TCC0055757</td>
+        <td>SATHI RANI DUTTA</td>
+        <td>6/28/2013</td>
+        <td>8/14/2017</td>
+        <td>100000</td>
+        <td>200000</td>
+      </tr>
+      <tr>
+        <td>6</td>
+        <td>FIXED</td>
+        <td><a href="TA01370992_protected.pdf">TA01370992</a></td>
+        <td>TCC0055761</td>
+        <td>SATHI RANI DUTTA</td>
+        <td>6/28/2013</td>
+        <td>7/13/2020</td>
+        <td>100000</td>
+        <td>300000</td>
+      </tr>
+      <tr>
+        <td>7</td>
+        <td>FIXED</td>
+        <td><a href="TA01370976_protected.pdf">TA01370976</a></td>
+        <td>TCC0055754</td>
+        <td>SATHI RANI DUTTA</td>
+        <td>6/28/2013</td>
+        <td>9/15/2020</td>
+        <td>100000</td>
+        <td>300000</td>
+      </tr>
+      <tr>
+        <td>8</td>
+        <td>FIXED</td>
+        <td><a href="TA01370986_protected.pdf">TA01370986</a></td>
+        <td>TC00062083</td>
+        <td>JAYANTA DUTTA</td>
+        <td>6/28/2013</td>
+        <td>10/9/2027</td>
+        <td>20000</td>
+        <td>200000</td>
+        
+      </tr>
+      <tr>
+          <td>9</td>
+          <td>FIXED</td>
+        <td><a href="TA01370983_protected.pdf">TA01370983</a></td>
+        <td>TCC0055758</td>
+        <td>JAYANTA DUTTA</td>
+        <td>6/28/2013</td>
+        <td>1/4/2027</td>
+        <td>50000</td>
+        <td>500000</td>
+        </tr>
+        <tr>
+          <td>10</td>
+          <td>FIXED</td>
+        <td><a href="TA01370965_protected.pdf">TA01370965</a></td>
+        <td>TCC0055752</td>
+        <td>JAYANTA DUTTA</td>
+        <td>6/28/2013</td>
+        <td>2/1/2027</td>
+        <td>50000</td>
+        <td>500000</td>
+        </tr>
+        <tr>
+          <td>11</td>
+          <td>FIXED</td>
+        <td><a href="TA01379981_protected.pdf">TA01370981</a></td>
+        <td>TCC0055756</td>
+        <td>JAYANTA DUTTA</td>
+        <td>6/28/2013</td>
+        <td>5/14/2027</td>
+        <td>30000</td>
+        <td>300000</td>
+        </tr>
+        <tr>
+          <td>12</td>
+          <td>FIXED</td>
+          <td><a href="TA01370979_protected.pdf">TA01370979</a></td>
+          <td>TCC0055755</td>
+          <td>JAYANTA DUTTA</td>
+          <td>6/28/2013</td>
+          <td>6/17/2027</td>
+          <td>30000</td>
+          <td>300000</td>
+        </tr>
+        <tr>
+          <td>13</td>
+          <td>FIXED</td>
+        <td><a href="TA01370967_protected.pdf">TA01370967</a></td>
+        <td>TCC0055753</td>
+        <td>SATHI RANI DUTTA</td>
+        <td>6/28/2013</td>
+        <td>7/13/2027</td>
+        <td>50000</td>
+        <td>500000</td>
+        </tr>
+        <tr>
+          <td>14</td>
+          <td>FIXED</td>
+        <td><a href="TA01370988_protected.pdf">TA01370988</a></td>
+        <td>TCC0055759</td>
+        <td>JAYANTA DUTTA</td>
+        <td>6/28/2013</td>
+        <td>8/14/2027</td>
+        <td>30000</td>
+        <td>300000</td>
+        </tr>
+        <tr>
+            <td>15</td>
+            <td>FIXED</td>
+            <td><a href="TA01370987_protected.pdf">TA01370987</a></td>
+            <td>TC00062018</td>
+            <td>JAYANTA DUTTA</td>
+            <td>6/28/2013</td>
+            <td>9/15/2027</td>
+            <td>15000</td>
+            <td>150000</td>
+            
+          </tr>
+          <tr>
+              <td>16</td>
+              <td>FIXED</td>
+            <td><a href="TA01370985_protected.pdf">TA01370985</a></td>
+            <td>TC00062017</td>
+            <td>JAYANTA DUTTA</td>
+         <td>6/28/2013</td>
+            <td>11/2/2026</td>
+            <td>20000</td>
+            <td>200000</td>
+            </tr>
+            <tr>
+              <td>17</td>
+              <td>FIXED</td>
+            <td><a href="TA01370984_protected.pdf">TA01370984</a></td>
+            <td>TC00062016</td>
+            <td>JAYANTA DUTTA</td>
+            <td>6/28/2013</td>
+            <td>11/14/2026</td>
+            <td>10000</td>
+            <td>100000</td>
+            </tr>
+            <tr>
+              <td>18</td>
+              <td>FIXED</td>
+            <td><a href="TA01370980_protected.pdf">TA01370980</a></td>
+            <td>TC00061934</td>
+            <td>JAYANTA DUTTA</td>
+            <td>6/28/2013</td>
+            <td>11/11/2025</td>
+            <td>10000</td>
+            <td>100000</td>
+            </tr>
+            <tr>
+              <td>19</td>
+              <td>FIXED</td>
+              <td><a href="TA01370978_protected.pdf">TA01370978</a></td>
+              <td>TC00061933</td>
+              <td>JAYANTA DUTTA</td>
+              <td>6/28/2013</td>
+              <td>11/22/2025</td>
+              <td>10000</td>
+              <td>100000</td>
+            </tr>
+            <tr>
+              <td>20</td>
+              <td>MIS</td>
+            <td><a href="TA01370970_protected.pdf">TA01370970</a></td>
+            <td>TYY0082055</td>
+            <td>MANORANJAN DUTTA</td>
+            <td>6/10/2015</td>
+            <td>6/10/2018</td>
+            <td>156000</td>
+            <td>156000</td>
+            </tr>
+            <tr>
+              <td>21</td>
+              <td>MIS</td>
+            <td><a href="TA02189309_protected.pdf">TA02189309</a></td>
+            <td>TYY0082056</td>
+            <td>MANORANJAN DUTTA</td>
+            <td>6/22/2015</td>
+            <td>06/22/2018</td>
+            <td>500000</td>
+            <td>500000</td>
+            </tr>
+             <tr>
+                <td>22</td>
+                <td>MIS</td>
+              <td><a href="TA02189306_protected.pdf">TA02189306</a></td>
+              <td>TYY0082054</td>
+              <td>JAYANTA DUTTA</td>
+              <td>11/15/2015</td>
+              <td>11/15/2018</td>
+              <td>200000</td>
+              <td>200000</td>
+              </tr>
+              <tr>
+                <td>23</td>
+                <td>MIS</td>
+              <td><a href="TA02189305_protected.pdf">TA02189305</a></td>
+              <td>TYY0082053</td>
+              <td>SHRABONI DUTTA</td>
+              <td>12/11/2015</td>
+              <td>12/11/2018</td>
+              <td>400000</td>
+              <td>400000</td>
+              </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>TOTAL</td>
+        
+        <td>2206000</td>
+        <td>5956000</td>
+       
+      </tr>
+    </table>
+      <br>
+      <br>
+      <br>
+ <CENTER><U>ALCHEMIST<br> (Original Certificate Submitted at office for maturity) </U></CENTER> <BR><BR>
+  <table id="customers">
+    <tr>
+        <th>SL</th>
+      <th>DEPOSIT STATUS</th>
+      <th>APPLICATION NO</th>
+      <th>CUST. ID NO</th>
+      <th>APPLICANT&nbspNAME</th>
+      <th>DATE OF DIPOSIT<BR>
+        MM/DD/YYYY</th>
+      <th>MATURITY DATE<BR>
+        MM/DD/YYYY</th>
+      <th>DEPOSIT AMT</th>
+      <th>MATURITY AMT</th>
+      
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>MIS</td>
+      <td><a href="TA02272922_protected.pdf">TA02272922</a></td>
+      <td>TYY0023669</td>
+      <td>MANORANJAN DUTTA</td>
+      <td>11/25/2013</td>
+      <td>11/25/2016</td>
+      <td>200000</td>
+      <td>200000</td>
+      
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>MIS</td>
+      <td><a href="TA02195259_protected.pdf">TA02195259</a></td>
+      <td>TYY0024732</td>
+      <td>MANORANJAN DUTTA</td>
+      <td>12/31/2013</td>
+      <td>12/31/2016</td>
+      <td>500000</td>
+      <td>500000</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>TOTAL</td>
+        
+        <td>700000</td>
+        <td>700000</td>
+       
+      </tr>
+      
+     
+              
+    
+  </table>
+  <br>
+  <br>
+  <br>
+  <CENTER><U>ALCHEMIST<br> (Get Bank Cheque for maturity) </U></CENTER> <BR><BR>
+    <table id="customers">
+      <tr>
+          <th>SL</th>
+        <th>DEPOSIT STATUS</th>
+        <th>APPLICATION NO</th>
+        <th>CUST. ID NO</th>
+        <th>APPLICANT&nbspNAME</th>
+        <th>DATE OF DIPOSIT<BR>
+          MM/DD/YYYY</th>
+        <th>MATURITY DATE<BR>
+          MM/DD/YYYY</th>
+        <th>DEPOSIT AMT</th>
+        <th>MATURITY AMT</th>
+        <th>CHEQUE</th>
+        
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>FIXED</td>
+        <td>TA01370996</td>
+        <td>TCC0055658</td>
+        <td>MANORANJAN DUTTA</td>
+        <td>10/16/2009</td>
+        <td>10/16/2015</td>
+        <td>50000</td>
+        <td>104000</td>
+        <td><a href="PNB430508_protected.pdf">430508</a></td>
+        
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>TOTAL</td>
+        
+        <td>50000</td>
+        <td>104000</td>
+        <td></td>
+       
+      </tr>
+      
+     
+              
+    
+  </table>
+  <br>
+  <br>
+  <br>
+  <CENTER><U>ALCHEMIST<br> (Original Bank Cheque submitted for maturity at office) </U></CENTER> <BR><BR>
+    <table id="customers">
+      <tr>
+          <th>SL</th>
+        <th>DEPOSIT STATUS</th>
+        <th>APPLICATION NO</th>
+        <th>CUST. ID NO</th>
+        <th>APPLICANT&nbspNAME</th>
+        <th>DATE OF DIPOSIT<BR>
+          MM/DD/YYYY</th>
+        <th>MATURITY DATE<BR>
+          MM/DD/YYYY</th>
+        <th>DEPOSIT AMT</th>
+        <th>MATURITY AMT</th>
+        <th>CHEQUE</th>
+        
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>FIXED</td>
+        <td>TA01370966</td>
+        <td>TCC0055684</td>
+        <td>JAYANTA DUTTA</td>
+        <td>04/24/2009</td>
+        <td>04/24/2015</td>
+        <td>50000</td>
+        <td>104000</td>
+        <td><a href="cheques_protected.pdf">753498</a></td>
+        
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>MIS</td>
+        <td>RE02323674<BR>(OLD)</td>
+        <td>RXX0048838</td>
+        <td>MANORANJAN DUTTA</td>
+        <td>11/24/2011</td>
+        <td>11/24/2014<BR>6 MONTHS DELAY</td>
+        <td>120000</td>
+        <td>120000</td>
+        <td><a href="cheques_protected.pdf">840873</a></td>
+        
+        
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>TOTAL</td>
+        
+        <td>170000</td>
+        <td>224000</td>
+        <td></td>
+       
+      </tr>
+      
+     
+              
+    
+  </table>
+  <br>
+  <br>
+  <br>
+  <CENTER><U>ALCHEMIST<br> (Office Cheques) </U></CENTER> <BR><BR>
+    <table id="customers">
+      <tr>
+          <th>SL</th>
+        <th>DEPOSIT STATUS</th>
+        <th>APPLICATION NO</th>
+        <th>CUST. ID NO</th>
+        <th>APPLICANT&nbspNAME</th>
+        <th>DATE OF DIPOSIT<BR>
+          MM/DD/YYYY</th>
+        <th>MATURITY DATE<BR>
+          MM/DD/YYYY</th>
+        <th>DEPOSIT AMT</th>
+        <th>MATURITY AMT</th>
+        <th>CHEQUE AMT</th>
+        <th>PAID CHEQUES</th>
+        <th>HAVE CHEQUES</th>
+        <th>NOT GET CHEQUES</th>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>MIS</td>
+        <td>TA02272922</td>
+        <td>TYY0023669</td>
+        <td>MANORANJAN DUTTA</td>
+        <td>11/25/2013</td>
+        <td>11/25/2016</td>
+        <td>200000</td>
+        <td>200000</td>
+        <TD>2000</TD>
+        <td>21ST</td>
+        <td><a href="TYY0023669.pdf">22ND/23RD/24TH</a><BR><a href="TYY0023669-2.pdf">25TH/26TH</a></td>
+        <td>27TH-36TH</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>MIS</td>
+        <td>TA02195259</td>
+        <td>TYY0024732</td>
+        <td>MANORANJAN DUTTA</td>
+        <td>12/31/2013</td>
+        <td>12/31/2016</td>
+        <td>500000</td>
+        <td>500000</td>
+        <TD>5000</TD>
+        <td>20TH</td>
+        <td><a href="TYY0024732.pdf">21ST/22ND/23RD</a><br><a href="TYY0024732-2.pdf">24TH/25TH</a> </td>
+        <td>26TH-36TH</td>
+        
+        
+      </tr> 
+      <tr>
+        <td>3</td>
+        <td>MIS</td>
+        <td>TA02189306</td>
+        <td>TYY0082054</td>
+        <td>JAYANTA DUTTA</td>
+        <td>11/15/2015</td>
+        <td>11/15/2018</td>
+        <td>200000</td>
+        <td>200000</td>
+        <TD>5000</TD>
+        <td>NIL</td>
+        <td><a href="TYY0082054.pdf">1ST/2ND</a></td>
+        <td>3RD-36TH</td>
+        
+        
+      </tr> 
+      <tr>
+        <td>4</td>
+        <td>MIS</td>
+        <td>TA01370970</td>
+        <td>TYY0082055</td>
+        <td>MANORANJAN DUTTA</td>
+        <td>06/10/2013</td>
+        <td>06/10/2016</td>
+        <td>156000</td>
+        <td>156000</td>
+        <TD>1560</TD>
+        <td>NIL</td>
+        <td><a href="TYY0082055-1.pdf">1ST/2ND/3RD</a><br><a href="TYY0082055-2.pdf">4TH/5TH</a><br><a href="TYY0082055-3.pdf">6TH/7TH</a></td>
+        <td>8TH-36TH</td>
+        
+        
+      </tr> 
+      <tr>
+        <td>5</td>
+        <td>MIS</td>
+        <td>TA02189305</td>
+        <td>TYY0082053</td>
+        <td>SHRABONI DUTTA</td>
+        <td>12/11/2015</td>
+        <td>12/11/2018</td>
+        <td>400000</td>
+        <td>400000</td>
+        <TD>4000</TD>
+        <td>NIL</td>
+        <td><a href="TYY0082053.pdf">1ST</a></td>
+        <td>2ND-36TH</td>
+        
+        
+      </tr> 
+      <tr>
+        <td>6</td>
+        <td>MIS</td>
+        <td>TA02189309</td>
+        <td>TYY0082056</td>
+        <td>MANORANJAN DUTTA</td>
+        <td>06/22/2015</td>
+        <td>06/22/2018</td>
+        <td>500000</td>
+        <td>500000</td>
+        <TD>5000</TD>
+        <td>NIL</td>
+        <td><a href="TYY0082056-1.pdf">1ST/2ND/3RD</a><br><a href="TYY0082056-2.pdf">4TH/5TH</a><br><a href="TYY0082056-3.pdf">6TH/7TH</a></td>
+        <td>8TH-36TH</td>
+        
+        
+      </tr> 
+  </table>
+  <BR>
+    <BR>
+      <BR>
+        <center> <p style="font-size: 13px;">&copy;2021-22 All Rights Reserved by Recuerdo</p>
+        </center> 
+       <p style="font-size: 10px;" align="right"><span class="blinking">Version 1.0.2</span></p></div>
+       
+
+</div>
+
+<script>
+/* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+var dropdown = document.getElementsByClassName("dropdown-btn");
+var i;
+
+for (i = 0; i < dropdown.length; i++) {
+  dropdown[i].addEventListener("click", function() {
+  this.classList.toggle("active");
+  var dropdownContent = this.nextElementSibling;
+  if (dropdownContent.style.display === "block") {
+  dropdownContent.style.display = "none";
+  } else {
+  dropdownContent.style.display = "block";
+  }
+  });
+}
+</script>
+
+</body>
+</html> 

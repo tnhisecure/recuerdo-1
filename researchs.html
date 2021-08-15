@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script src="allpassword.js"> </script>
+  <link rel="shortcut icon" href="brain.jpg" type="image/x-icon">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    body {
+      font-family: "Lato", sans-serif;
+    }
+
+    /* Fixed sidenav, full height */
+    .sidenav {
+      height: 100%;
+      width: 250px;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      background-color: #111;
+      overflow-x: hidden;
+      padding-top: 20px;
+    }
+
+    /* Style the sidenav links and the dropdown button */
+    .sidenav a,
+    .dropdown-btn {
+      padding: 6px 8px 6px 16px;
+      text-decoration: none;
+      font-size: 20px;
+      color: #818181;
+      display: block;
+      border: none;
+      background: none;
+      width: 100%;
+      text-align: left;
+      cursor: pointer;
+      outline: none;
+    }
+
+    /* On mouse-over */
+    .sidenav a:hover,
+    .dropdown-btn:hover {
+      color: #f1f1f1;
+    }
+
+    /* Main content */
+    .main {
+      margin-left: 250px;
+      /* Same as the width of the sidenav */
+      font-size: 20px;
+      /* Increased text to enable scrolling */
+      padding: 0px 10px;
+    }
+
+    /* Add an active class to the active dropdown button */
+    .active {
+      background-color: green;
+      color: white;
+    }
+
+    /* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
+    .dropdown-container {
+      display: none;
+      background-color: #262626;
+      padding-left: 8px;
+    }
+
+    /* Optional: Style the caret down icon */
+    .fa-caret-down {
+      float: right;
+      padding-right: 8px;
+    }
+
+    /* Some media queries for responsiveness */
+    @media screen and (max-height: 450px) {
+      .sidenav {
+        padding-top: 15px;
+      }
+
+      .sidenav a {
+        font-size: 18px;
+      }
+    }
+
+    .blinking {
+      animation: blinkingText 1.2s infinite;
+    }
+
+    @keyframes blinkingText {
+      0% {
+        color: #000;
+      }
+
+      49% {
+        color: #000;
+      }
+
+      60% {
+        color: transparent;
+      }
+
+      99% {
+        color: transparent;
+      }
+
+      100% {
+        color: #000;
+      }
+    }
+    /* (A) CONTAINER */
+#stopwatch {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 320px;
+  margin: 0 auto;
+}
+ 
+/* (B) TIME */
+#sw-time {
+  width: 100%;
+  padding: 20px 0;
+  font-size: 48px;
+  font-weight: bold;
+  text-align: center;
+  background: #000;
+  color: #fff;
+}
+ 
+/* (C) BUTTONS */
+#sw-rst, #sw-go {
+  box-sizing: border-box;
+  width: 50%;
+  cursor: pointer;
+  padding: 20px 0;
+  border: 0;
+  color: #fff;
+  font-size: 20px;
+}
+#sw-rst { background-color: #a32208; }
+#sw-go { background-color: #20a308; }
+
+  </style>
+  <title>RECUERDO</title>
+</head>
+
+<body>
+
+  <div class="sidenav">
+    <img src="brain.jpg" width="250px" height="150 px">
+    <a href="welcome.html">DASHBOARD</a>
+    <a href="contacts.html">CONTACTS</a>
+    <button class="dropdown-btn">HOUSE
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-container">
+      <a href="thakur.html">THAKUR</a>
+      <a href="dolil.html">DOLIL</a>
+      <a href="khajna.html">KHAJNA</a>
+      <a href="housetax.html">HOLDING-TAX</a>
+      <a href="key.html">KEY</a>
+      <a href="rent.html">RENT</a>
+      <button class="dropdown-btn">PUJA CHANDA
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-container">
+        <a href="kalipuja.html">KALI PUJA</a>
+        <a href="durgapuja.html">DURGA PUJA</a>
+
+      </div>
+      <button class="dropdown-btn">MAINTENANCE
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-container">
+        <a href="wooden.html">WOODEN</a>
+        <a href="grill.html">GRILL</a>
+        <a href="civil.html">CIVIL</a>
+        <a href="plumber.html">PLUMBER</a>
+        <a href="electricity.html">ELECTRICITY</a>
+
+      </div>
+    </div>
+    <button class="dropdown-btn">FINANCIAL
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-container">
+      <a href="bank.html">BANK</a>
+      <a href="po.html">POST-OFFICE</a>
+      <a href="mf.html">MUTUAL FUND</a>
+      <a href="it.html">INCOME-TAX</a>
+      <a href="mpg.html">MPG-NCD</a>
+      <a href="ornaments.html">ORNAMENTS</a>
+      <a href="badd.html">BAD DEBT</a>
+      <a href="insurance.html">INSURANCE</a>
+      <a href="pension.html">PENSION</a>
+      <a href="earning.html">EARNING</a>
+      <a href="expances.html">EXPANCES</a>
+      <a href="planning.html">PLANNING</a>
+    </div>
+    <button class="dropdown-btn">MEDICAL
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-container">
+      <a href="hospital.html">HOSPITAL</a>
+      <a href="medicine.html">MEDICINE</a>
+      <a href="aid.html">FIRST AID KIT</a>
+    </div>
+    <button class="dropdown-btn">IDENTITY
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-container">
+      <a href="bc.html">BIRTH CERTIFICATE</a>
+      <a href="bg.html">BLOOD GROUP</a>
+      <a href="pan.html">PAN CARD</a>
+      <a href="aadhar.html">AADHAR CARD</a>
+      <a href="vc.html">VOTER CARD</a>
+      <a href="passport.html">PASSPORT</a>
+      <a href="dl.html">DRIVING LICENCE</a>
+      <a href="rc.html">RATION CARD</a>
+      <a href="sd.html">SCHOOL DOCS</a>
+      <a href="mc.html">MEMBERSHIP CARD</a>
+      <a href="pp.html">PASSPORT PHOTO</a>
+      <a href="dc.html">DEATH CERTIFICATE</a>
+    </div>
+    <button class="dropdown-btn">EX-SERVICE
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-container">
+      <a href="ma.html">MA</a>
+      <a href="baba.html">BABA</a>
+    </div>
+    <button class="dropdown-btn">FURNITURE
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-container">
+      <a href="electronic.html">ELECTRONIC</a>
+      <a href="nonelec.html">NON-ELECTRONIC</a>
+      <a href="vehicels.html">VEHICELS</a>
+      <a href="whatisinit.html">WHAT IS IN IT?</a>
+    </div>
+    <button class="dropdown-btn">LEGAL
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-container">
+      <a href="loan.html">LOAN</a>
+      <a href="court.html">MY COURT CASES</a>
+      <a href="will.html">WILL</a>
+    </div>
+    <a href="p&v.html">PHOTOS & VIDEOS</a>
+    <a href="event.html">EVENTS</a>
+    <a href="researchs.html">RESEARCHS</a>
+    <br>
+    <br>
+    <a href="logout.html">LOG OUT</a>
+  </div>
+
+  <div class="main">
+    <h2><U>
+        <CENTER>RECUERDO</CENTER>
+      </U></h2>
+    <MARQUEE>
+      <FONT COLOR="RED">I AM VERY GLAD TO ANNOUNCE YOU THAT THIS SITE 100% HOSTING AND DOMAIN RENEWAL FREE, MEANS IT IS
+      </FONT>
+      <FONT COLOR="green"><b> IMMORTAL SITE.</b></FONT>
+    </MARQUEE>
+    <hr>
+    <img src="research.jpg" height=300px width=100%><br>
+    <br>
+    <br>
+
+    MY CURRENT RESEARCH ON HTML, CSS, JAVASCRIPT, C#, ASP.NET, MVC-5. <BR><BR>
+    <U>DEVELOPMENT SCHEDULE:</U> <br>
+<ul>
+    <li>HTML--30 MINS/DAY</li>
+    
+    <br>
+    <li>CSS --30 MINS/DAY</li>
+    <br>
+
+    <li>JAVASCRIPT---2 HRS/DAY</li>
+
+     <BR>
+
+
+    <li>C# ---2 HRS/DAY</li>
+
+ 
+    <BR>
+   <li>MVC 5 -- 1 HR/DAY</li> 
+   
+    <div id="stopwatch">
+      <!-- CURRENT TIME -->
+      <div id="sw-time">00:00:00</div>
+
+      <!-- CONTROLS -->
+      <input type="button" value="Reset" id="sw-rst" disabled />
+      <input type="button" value="Start" id="sw-go" disabled />
+    </div>
+    
+  </ul>
+  <BR><BR>
+
+    I WILL MAKING A UNHACKABLE WEB APPLICATION FOR HMS.(HOSPITAL MANAGEMENT SOFTWARE)<BR><BR>
+    MY COMPANY NAME i-SECURE.<BR><BR><br><br>
+    LOGO OF THIS COMPANY WILL BE<img src="LOGO.jpg" height="100px" width="100px"><br><br><br><br>
+    COMPANY NAME WILL BE <img src="LOGO  ISECURE.jpg" height="200px" width="500px"><br><br><br><br>
+    VISITING CARD <img src="CARD ISECURE.jpg" height="300px" width="600px"><br><br><br><br>
+    SLOGAN WILL BE <span class="blinking">"RIGHT MANAGEMENT, RIGHT PROTECTION, RIGHT TIME."</span><br><br><br><br>
+    <br>
+    <br>
+    <hr>
+    <p style="font-size: 10px;" align="right"><span class="blinking">Version 1.0.2</span></p></div>
+   
+    <center> <p style="font-size: 13px;">&copy;2021-22 All Rights Reserved by Recuerdo</p>
+    </center> 
+
+  </div>
+  <script>
+var sw = {
+  // (A) INITIALIZE
+  etime : null, // HTML time display
+  erst : null, // HTML reset button
+  ego : null, // HTML start/stop button
+  init : function () {
+    // (A1) GET HTML ELEMENTS
+    sw.etime = document.getElementById("sw-time");
+    sw.erst = document.getElementById("sw-rst");
+    sw.ego = document.getElementById("sw-go");
+
+    // (A2) ENABLE BUTTON CONTROLS
+    sw.erst.addEventListener("click", sw.reset);
+    sw.erst.disabled = false;
+    sw.ego.addEventListener("click", sw.start);
+    sw.ego.disabled = false;
+  },
+
+  // (B) TIMER ACTION
+  timer : null, // timer object
+  now : 0, // current elapsed time
+  tick : function () {
+    // (B1) CALCULATE HOURS, MINS, SECONDS
+    sw.now++;
+    var remain = sw.now;
+    var hours = Math.floor(remain / 3600);
+    remain -= hours * 3600;
+    var mins = Math.floor(remain / 60);
+    remain -= mins * 60;
+    var secs = remain;
+
+    // (B2) UPDATE THE DISPLAY TIMER
+    if (hours<10) { hours = "0" + hours; }
+    if (mins<10) { mins = "0" + mins; }
+    if (secs<10) { secs = "0" + secs; }
+    sw.etime.innerHTML = hours + ":" + mins + ":" + secs;
+  },
+  
+  // (C) START!
+  start : function () {
+    sw.timer = setInterval(sw.tick, 1000);
+    sw.ego.value = "Stop";
+    sw.ego.removeEventListener("click", sw.start);
+    sw.ego.addEventListener("click", sw.stop);
+  },
+
+  // (D) STOP
+  stop  : function () {
+    clearInterval(sw.timer);
+    sw.timer = null;
+    sw.ego.value = "Start";
+    sw.ego.removeEventListener("click", sw.stop);
+    sw.ego.addEventListener("click", sw.start);
+  },
+
+  // (E) RESET
+  reset : function () {
+    if (sw.timer != null) { sw.stop(); }
+    sw.now = -1;
+    sw.tick();
+  }
+};
+window.addEventListener("load", sw.init);
+  </script>
+  
+<script src="dropdown.js">
+
+</script>
+
+</body>
+
+</html>

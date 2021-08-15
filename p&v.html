@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="allpassword.js"> </script>
+  <link rel="shortcut icon" href="brain.jpg" type="image/x-icon">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {
+  font-family: "Lato", sans-serif;
+}
+
+/* Fixed sidenav, full height */
+.sidenav {
+  height: 100%;
+  width: 250px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+/* Style the sidenav links and the dropdown button */
+.sidenav a, .dropdown-btn {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #818181;
+  display: block;
+  border: none;
+  background: none;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  outline: none;
+}
+
+/* On mouse-over */
+.sidenav a:hover, .dropdown-btn:hover {
+  color: #f1f1f1;
+}
+
+/* Main content */
+.main {
+  margin-left: 250px; /* Same as the width of the sidenav */
+  font-size: 20px; /* Increased text to enable scrolling */
+  padding: 0px 10px;
+}
+
+/* Add an active class to the active dropdown button */
+.active {
+  background-color: green;
+  color: white;
+}
+
+/* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
+.dropdown-container {
+  display: none;
+  background-color: #262626;
+  padding-left: 8px;
+}
+
+/* Optional: Style the caret down icon */
+.fa-caret-down {
+  float: right;
+  padding-right: 8px;
+}
+
+/* Some media queries for responsiveness */
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #474e5d;
+  font-family: Helvetica, sans-serif;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  background-color: white;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+}
+
+/* Container around content */
+.container {
+  padding: 10px 40px;
+  position: relative;
+  background-color: inherit;
+  width: 50%;
+}
+
+/* The circles on the timeline */
+.container::after {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: -17px;
+  background-color: white;
+  border: 4px solid #FF9F55;
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+/* Place the container to the left */
+.left {
+  left: 0;
+}
+
+/* Place the container to the right */
+.right {
+  left: 50%;
+}
+
+/* Add arrows to the left container (pointing right) */
+.left::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  right: 30px;
+  border: medium solid white;
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent white;
+}
+
+/* Add arrows to the right container (pointing left) */
+.right::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  left: 30px;
+  border: medium solid white;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent white transparent transparent;
+}
+
+/* Fix the circle for containers on the right side */
+.right::after {
+  left: -16px;
+}
+
+/* The actual content */
+.content {
+  padding: 20px 30px;
+  background-color: white;
+  position: relative;
+  border-radius: 6px;
+}
+
+/* Media queries - Responsive timeline on screens less than 600px wide */
+@media screen and (max-width: 600px) {
+  /* Place the timelime to the left */
+  .timeline::after {
+  left: 31px;
+  }
+  
+  /* Full-width containers */
+  .container {
+  width: 100%;
+  padding-left: 70px;
+  padding-right: 25px;
+  }
+  
+  /* Make sure that all arrows are pointing leftwards */
+  .container::before {
+  left: 60px;
+  border: medium solid white;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent white transparent transparent;
+  }
+
+  /* Make sure all circles are at the same spot */
+  .left::after, .right::after {
+  left: 15px;
+  }
+  
+  /* Make all right containers behave like the left ones */
+  .right {
+  left: 0%;
+  }
+}
+.blinking{
+    animation:blinkingText 1.2s infinite;
+}
+@keyframes blinkingText{
+    0%{     color: #000;    }
+    49%{    color: #000; }
+    60%{    color: transparent; }
+    99%{    color:transparent;  }
+    100%{   color: #000;    }
+}
+</style>
+<title>RECUERDO</title>
+</head>
+<body>
+
+  <div class="sidenav">
+    <img src="brain.jpg" width="250px" height="150 px">
+    <a href="welcome.html">DASHBOARD</a>
+    
+    <a href="contacts.html">CONTACTS</a>
+    <button class="dropdown-btn">HOUSE
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-container">
+      <a href="thakur.html">THAKUR</a>
+      <a href="dolil.html">DOLIL</a>
+      <a href="khajna.html">KHAJNA</a>
+      <a href="housetax.html">HOLDING-TAX</a>
+      <a href="key.html">KEY</a>
+      <a href="rent.html">RENT</a>
+      <button class="dropdown-btn">PUJA CHANDA
+          <i class="fa fa-caret-down"></i>
+        </button>
+      <div class="dropdown-container">
+        <a href="kalipuja.html">KALI PUJA</a>
+        <a href="durgapuja.html">DURGA PUJA</a>
+        
+      </div>
+      <button class="dropdown-btn">MAINTENANCE
+          <i class="fa fa-caret-down"></i>
+        </button>
+      <div class="dropdown-container">
+      <a href="wooden.html">WOODEN</a>
+      <a href="grill.html">GRILL</a>
+      <a href="civil.html">CIVIL</a>
+      <a href="plumber.html">PLUMBER</a>
+      <a href="electricity.html">ELECTRICITY</a>
+      
+      </div>    
+    </div>
+    <button class="dropdown-btn">FINANCIAL 
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-container">
+      <a href="bank.html">BANK</a>
+      <a href="po.html">POST-OFFICE</a>
+      <a href="mf.html">MUTUAL FUND</a>
+      <a href="it.html">INCOME-TAX</a>
+      <a href="mpg.html">MPG-NCD</a>
+      <a href="ornaments.html">ORNAMENTS</a>
+      <a href="badd.html">BAD DEBT</a>
+      <a href="insurance.html">INSURANCE</a>
+      <a href="pension.html">PENSION</a>
+      <a href="earning.html">EARNING</a>
+      <a href="expances.html">EXPANCES</a>
+      <a href="planning.html">PLANNING</a>
+     </div>
+    <button class="dropdown-btn">MEDICAL 
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-container">
+      <a href="hospital.html">HOSPITAL</a>
+      <a href="medicine.html">MEDICINE</a>
+      <a href="aid.html">FIRST AID KIT</a>
+    </div>
+    <button class="dropdown-btn">IDENTITY 
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-container">
+      <a href="bc.html">BIRTH CERTIFICATE</a>
+      <a href="bg.html">BLOOD GROUP</a>
+      <a href="pan.html">PAN CARD</a>
+      <a href="aadhar.html">AADHAR CARD</a>
+      <a href="vc.html">VOTER CARD</a>
+      <a href="passport.html">PASSPORT</a>
+      <a href="dl.html">DRIVING LICENCE</a>
+      <a href="rc.html">RATION CARD</a>
+      <a href="sd.html">SCHOOL DOCS</a>
+      <a href="mc.html">MEMBERSHIP CARD</a>
+      <a href="pp.html">PASSPORT PHOTO</a>
+      <a href="dc.html">DEATH CERTIFICATE</a>
+    </div>
+    <button class="dropdown-btn">EX-SERVICE 
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-container">
+      <a href="ma.html">MA</a>
+      <a href="baba.html">BABA</a>
+    </div>
+    <button class="dropdown-btn">FURNITURE 
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-container">
+      <a href="electronic.html">ELECTRONIC</a>
+      <a href="nonelec.html">NON-ELECTRONIC</a>
+      <a href="vehicels.html">VEHICELS</a>
+      <a href="whatisinit.html">WHAT IS IN IT?</a>
+    </div>
+    <button class="dropdown-btn">LEGAL
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-container">
+      <a href="loan.html">LOAN</a>
+      <a href="court.html">MY COURT CASES</a>
+      <a href="will.html">WILL</a>
+    </div>
+    <a href="p&v.html">PHOTOS & VIDEOS</a>
+     <a href="event.html">EVENTS</a>
+    <a href="researchs.html">RESEARCHS</a>
+    <br>
+    <br>
+    <a href="logout.html">LOG OUT</a>
+  </div>
+  
+  <div class="main">
+    <h2><U><CENTER>RECUERDO</CENTER></U></h2>
+    <MARQUEE><FONT COLOR="RED">I AM VERY GLAD TO ANNOUNCE YOU THAT THIS SITE 100% HOSTING AND DOMAIN RENEWAL FREE, MEANS IT IS</FONT><FONT COLOR="green"><b> IMMORTAL SITE.</b></FONT></MARQUEE>
+    <hr>
+    <img src="img_photos_viseos_banner.jpg" height=300px width=100%><br>
+  <div class="timeline">
+    <div class="container left">
+      <div class="content">
+        <h2>2021</h2>
+        <p><a href="https://drive.google.com/drive/folders/1LPArpZLvBlb-fCg-Hzct2jMJmNe2Ekp1?usp=sharing">Oli-Subha B day Celebration Anaya 09/01/2021</a></p>
+        <p><a href="https://drive.google.com/drive/folders/1nd0z3Cd6q8oCeDD64YLS2zSx4i_zMf41?usp=sharing">Picnic From TNH 10/01/2021</a></p>
+        <p><a href="https://drive.google.com/drive/folders/1-VzYQ4zrYG6K34q7dcKwa-AmxY2vLSwz?usp=sharing">Picnic Deul park (mou & friends) 17/01/2021</a></p>
+        <p><a href="https://drive.google.com/drive/folders/1JGyPgb8O_8iGsE7soZP9qiDZuF8tuGHj?usp=sharing">OT-MOU-MISSION HOSPITAL 02-03-2021</a></p>
+        <p><a href="https://drive.google.com/drive/folders/1m7tn5u_zJtqSUbduw9FynGTPhN_ImK1Q?usp=sharing">ESIC PHOTO BABA-MA-ME 15-03-2021</a></p>
+        <p><a href="https://drive.google.com/drive/folders/1Eh7DVyLN2_52X9AA0jjkTn8FeGkjRewP?usp=sharing">Rohan birthday 04-04-2021</a></p>
+        <p><a href="https://drive.google.com/drive/folders/1LI3BRJ5zauaWM6zDCYSCm7_H7Ci7CeOD?usp=sharing">Pratasha Bday Celebration 14-04-2021</a></p>
+        <p><a href="https://drive.google.com/drive/folders/1PWndebv1LojG6jL6hdZaKVl-tY2F-x80?usp=sharing">MA R.I.P 19-04-2021</a></p>
+        <p><a href="https://drive.google.com/drive/folders/1O42ojEpMEVjwRNq-R0R44-8WsuhdVzSt?usp=sharing">Soujonno Annoprason 13-05-2021</a></p>
+        <P><a href="https://drive.google.com/drive/folders/14K_PhQZibEnKgYIb0nAbgxMl4vOlkaUN?usp=sharing">Arkodev Saha 5th Birthday 04-08-2021</a></p>
+      </div>
+    </div>
+    <div class="container right">
+      <div class="content">
+        <h2>2020</h2>
+        <p><a href="https://drive.google.com/drive/folders/1Kgb1WvIpYpg6QvrUX1K1D-oh4OA_AdN9?usp=sharing">Deul Park Anniversary Celebration 22-01-2020</a></p>
+        <p><a href="https://drive.google.com/drive/folders/1TGGBSySgSjuBSYR-yStR0Uzowlhfvs59?usp=sharing">Santosham Chest Hospital 12-02-2020</a></p>
+        <p><a href="https://drive.google.com/drive/folders/1KP5hUpCPjVfXQ5T2sN0PHnsFtt7_FzH0?usp=sharing">Arup Da R.I.P 04-05-2020</a></p>
+        <p><a href="https://drive.google.com/drive/folders/1PALf36p2CUvXE5zEL3gJk8kHF8gsP1pg?usp=sharing">TNH 22-06-2020</a></p>
+        <p><a href="https://drive.google.com/drive/folders/14xFDLEopIT4YfxddWvnCLMbIDZhgQo0Z?usp=sharing">SUBIR MARRIAGE 25-07-2020</a></p>
+        <p><a href="https://drive.google.com/drive/folders/1-nSkl_zb-SavHKceNTumEJFKQ0SErNh6?usp=sharing">CITY SHOP 1ST Anniversary 02-10-2020</a></p>
+        <p><a href="https://drive.google.com/drive/folders/1Kis75V3dHWpbGBqEbZJVKX700HtgP-QY?usp=sharing">Durga puja 22-10-2020</a></p>  
+        <p><a href="https://drive.google.com/drive/folders/1oa0vVwJhN9ip_wRfWsVy4Hr1uLQ1WI3w?usp=sharing">Babu B day Celebration 30-10-2020</a></p>  
+        <p><a href="https://drive.google.com/drive/folders/10gH5G6piVnu1Mr0vIbi6uIQ2Olmf6pke?usp=sharing">Lakshmi Puja 31-10-2020</a></p>  
+        <p><a href="https://drive.google.com/drive/folders/1H7SLP5IExnGY_8y3WmOu9jJAbq4teFRw?usp=sharing">City Shop meeting 01-11-2020</a></p>  
+        <p><a href="https://drive.google.com/drive/folders/1Yo0v49IxNHQVAfmWYuwf2YCV9cRI0Hmz?usp=sharing">Bhai Fota 16-11-2020</a></p>  
+        <p><a href="https://drive.google.com/drive/folders/18JxaMW-00lCWCVxniIFjpfQAY1MYhbaf?usp=sharing">Maithon Damp 27-11-2020</a></p>          
+        <p><a href="https://drive.google.com/drive/folders/1SY6sgRndnSsc5KBdPI7GrXTh_2mQUlYd?usp=sharing">Dooars 28-11-2020</a></p>          
+        <p><a href="https://drive.google.com/drive/folders/1Rz5mHUhSQGB9pFYq7rw7EzJdaN8CJ-pf?usp=sharing">Deul Park 25-12-2020</a></p>
+        <p><a href="https://drive.google.com/drive/folders/1_Shu5Zhmoc-UW1ohZC6i0K6eCbGm7Czn?usp=sharing">Mantu Bday Celebration 29-12-2020</a></p>
+        <p><a href="https://drive.google.com/drive/folders/1Gottt-WMcv1igBVAvGYGChKvYDw1FAw1?usp=sharing">Baba Apollo Geneagles Hospital 30-12-2020</a></p>
+        
+
+
+
+      </div>
+    </div>
+    <div class="container left">
+      <div class="content">
+        <h2>2019</h2>
+        <p><a href="https://drive.google.com/drive/folders/180Cp9ZuQybxF1v3XKNY1-563MVt8MFXJ?usp=sharing">PIKLU COME 05-10-2019</a></p>
+        <p><a href="https://drive.google.com/drive/folders/1OuSipu1nkYDdyMDHzCv6sSKw7mvw6T1u?usp=sharing">PIKLU COME 05-10-2019</a></p>
+        <p><a href="https://youtu.be/lFptm9PNESE">PIKLU INTERVIEW 05-10-2019</a></p>
+        <p><a href="https://drive.google.com/drive/folders/1Y7PP5MqnzTu7HevX0tF_6qX1V-2LlE4n?usp=sharing">DIGHA 22-12-2019</a></p>
+        <p><a href="https://drive.google.com/drive/folders/1Bpf5gFjbpxHueeSZuqIyN6NuGFDQr0fC?usp=sharing">Alipore Zoo 30-12-2019</a></p>
+        
+
+
+      
+      </div>
+    </div>
+    <div class="container right">
+      <div class="content">
+        <h2>2018</h2>
+        <p><a href="https://drive.google.com/drive/folders/1luxtlot5gDzuUZxWuR1ZE4UXSFSrSvn4?usp=sharing">45th Anniversary 22-01-2018</a></p>
+        <p><a href="https://drive.google.com/drive/folders/1g9oVl8o0MRllDo0dVs4YcvBhvbP18i6u?usp=sharing">FULLORA TOLA 25-01-2018</a></p>
+        <p><a href="https://drive.google.com/drive/folders/1p39bVCBnTDq_D0A61V4jt4Sa5H1ij-gx?usp=sharing">CMC-VELLORE 04-02-2018</a></p>
+        <p><a href="https://drive.google.com/drive/folders/1zG_CYzNAAFud4AjYVSgR9aPkIUMoT-Uf?usp=sharing">HUCHUKDANGA 05-05-2018</a></p>
+        <p><a href="https://drive.google.com/drive/folders/1YAx1JkSMqml5Xzjt7xRPe_OA2lWdEo7y?usp=sharing">Kali Puja 06-11-2018</a></p>
+        <p><a href="https://drive.google.com/drive/folders/1cjFBTBbL7KTnsxv59KoWu0UW-KijIjXb?usp=sharing">GONA MARRIAGE 09-11-2018</a></p>
+        <p><a href="https://drive.google.com/drive/folders/1IOheEkk5CU-MliWHHcVYP9ZixtSKL_99?usp=sharing">K.M.P. Park 27-12-2018</a></p>
+        <p><a href="https://drive.google.com/drive/folders/1dhQk9G1CKimd15f6fAhAFV8Hs1vyascg?usp=sharing">Mama Bhagne Pahar 31-12-2018</a></p>
+        
+      </div>
+    </div>
+    <div class="container left">
+      <div class="content">
+        <h2>2017</h2>
+        <p><a href="https://photos.app.goo.gl/Sy4CGJsogmFt6dvm6">Bangkok 15-01-2017</a></p>
+        <p><a href="https://drive.google.com/drive/folders/1luUBgS7T8ZeRI7Hmh0TbQJ1zaKnTytRh?usp=sharing">Mou old memories 12-02-2017</a></p>
+        <p><a href="https://drive.google.com/drive/folders/1t6f1CUC0wQkqkq4jcb-3ZPBN5tbYEEzE?usp=sharing">Troyka Park 09-06-2017</a></p>
+        <p><a href="https://drive.google.com/drive/folders/1DwJLuYqz-oYw67Ssi467QTToVEAerlLg?usp=sharing">Baba 72nd B day 27-06-2017</a></p>
+        <p><a href="https://drive.google.com/drive/folders/1nNcuw4auS5v23lLaCk6w75fQBBlUSL7P?usp=sharing">Durga Puja 26-09-2017</a></p>
+        <p><a href="https://drive.google.com/drive/folders/1cUHWO3K2un8dNSvnYGJsv-qacF-wNVYs?usp=sharing">My B day 12-10-2017</a></p>
+        
+      </div>
+    </div>
+    <div class="container right">
+      <div class="content">
+        <h2>2016</h2>
+        <p><a href="https://photos.app.goo.gl/PKGawdiDNhq7jHNH9">Sundorbon 15-01-2016</a></p>
+        <p><a href="https://photos.app.goo.gl/hmAqfdUTnTJzkEWw5">Kanniyakumari 16-03-2016</a></p>
+        <p><a href="https://photos.app.goo.gl/XxUiaKvvvnDkrRP7A">HARIDWAR/ RISHIKESH /SHIMLA/ KUFRI/ NARKHANDA/ MISOURI/ DERADUN 31-03-2016</a></p>
+        <p><a href="https://drive.google.com/drive/folders/1BadvLVcSe4YnnvCD68Niv1ea5d_PvqdD?usp=sharing">Haridwar 31-03-2016</a></p>
+        <p><a href="https://drive.google.com/drive/folders/1N3-7-iamAFBc8ojmlFpj2pl8xYwdUDI8?usp=sharing">Rishikesh 01-04-2016</a></p>
+        <p><a href="https://drive.google.com/drive/folders/1GgHoqqzgainTG4dwUGZhYQPjNaZauDoj?usp=sharing">Deradun 02-04-2016</a></p>
+        <p><a href="https://drive.google.com/drive/folders/15_WqmJjvoKjgM6ntcRQQ6Son6l_AXC23?usp=sharing">Mussorie 03-04-2016</a></p>
+        <p><a href="https://drive.google.com/drive/folders/141oA9L9zedWzzSMSFPA4otUL0NqDWEjW?usp=sharing">Shimla 04-04-2016</a></p>
+        <p><a href="https://drive.google.com/drive/folders/1NeAySKK8WG6_tEI6SD4zGocBrxble1SZ?usp=sharing">Kufri 05-04-2016</a></p>
+        <p><a href="https://drive.google.com/drive/folders/1J4xwM9diVMI4qltzc0DOcf81r81XVEqw?usp=sharing">Narkhada 06-04-2016</a></p>
+        <p><a href="https://drive.google.com/drive/folders/1B-JTmZmRMfjKGHprs2Gw7SohrkCYHiF8?usp=sharing">Yadavindro garden pinjore Haryana 07-04-2016</a></p>
+        
+      </div>
+    </div>
+    <div class="container left">
+      <div class="content">
+        <h2>2015</h2>
+        <p><a href="https://photos.app.goo.gl/LzTPS9PM2b8LV1Ux6">GOA 01-02-2015</a></p>
+        <p><a href="https://drive.google.com/drive/folders/1e0H3G1NEMQDSfkY6OxZb5ykCwLD4w9hr?usp=sharing">Darjeeling 16-02-2015</a></p>
+        <p><a href="https://photos.app.goo.gl/i55177BgMAvVLQUU8">Digha 24-08-2015</a></p>
+        <p><a href="https://photos.app.goo.gl/CS3sxFfE4iqsKCh46">DELHI/AGRA/MATHURA 19-09-2015</a></p>
+        <p><a href="https://drive.google.com/drive/folders/1J9tU2WfC83VjGR2NGYQ1JSKXcysoiG6G?usp=sharing">Brindabon 08-10-2015</a></p>
+        <p><a href="https://photos.app.goo.gl/pmezV1QyNEi3zS8U9">GANGTOK/ ZERO POINT 29-11-2015</a></p>
+        <p><a href="https://drive.google.com/drive/folders/1aO29dkIId6Lf82NTXxQy7e0VXLxlAKt8?usp=sharing">Lachung 30-11-2015</a></p>
+        
+      </div>
+    </div>
+    <div class="container right">
+      <div class="content">
+        <h2>2014</h2>
+        <p><a href="https://photos.app.goo.gl/vjoeUXcbd4bWZSV8A">Digha Hud Hud 11-10-2014</a></p>
+        <p><a href="https://youtu.be/n9uLwjHALGE">DIGHA HUD HUD VIDEO 1, </a></p>
+        <P><a href="https://youtu.be/niM_6hXkJCo">DIGHA HUD HUD VIDEO 2</a></p>
+        <p><a href="https://photos.app.goo.gl/9uxJ85rZfmZUThaU8">Puri 07-11-2014</a></p>
+        <p><a href="https://youtu.be/Cqc4zmMqk1k">PURI VIDEO</a></p>
+        
+      </div>
+    </div>
+    <div class="container left">
+      <div class="content">
+        <h2>2013</h2>
+        <p><a href=""></a></p>
+        
+        
+      </div>
+    </div>
+    <div class="container right">
+      <div class="content">
+        <h2>2012</h2>
+        <p><a href=""></a></p>
+        
+      </div>
+    </div>
+    <div class="container left">
+      <div class="content">
+        <h2>2011</h2>
+        <p><a href="https://photos.app.goo.gl/2Y6PvrPC6vqoTzw3A">Pune 26-08-2011</a></p>
+        <p><a href="https://youtu.be/2x5T_htWBPY">PUNE VIDEO</a></p>
+        
+      </div>
+    </div>
+    <div class="container right">
+      <div class="content">
+        <h2>2010</h2>
+        <p><a href="https://photos.app.goo.gl/a6hMixoQDRM3wzFj6">DHUYADHAR & VERAGHAT 01-06-2010</a></p>
+        <p><a href="https://youtu.be/6qxsZEhlLYk">VIDEO</a></p>
+       
+      </div>
+    </div>
+    <div class="container left">
+      <div class="content">
+        <h2>2009</h2>
+        <p><a href=""></a></p>
+        <p><a href=""></a></p>
+        
+      </div>
+    </div>
+    <div class="container right">
+      <div class="content">
+        <h2>MIXED UNIVERSAL</h2>
+        <p><a href="https://drive.google.com/drive/folders/1tbVkQbq_NhasC5yEYZ9zYk4qHzKr1qR4?usp=sharing">Universal Mixed</a></p>
+        <p><a href=""></a></p>
+        
+      </div>
+    </div>
+
+  
+  <br>
+  <br>
+  <hr>
+  <p style="font-size: 10px;" align="right"><span class="blinking">Version 1.0.2</span></p></div>
+ 
+  <center> <p style="font-size: 13px;">&copy;2021-22 All Rights Reserved by Recuerdo</p>
+  </center> 
+</div>
+  
+</div>
+<script src="dropdown.js">
+
+</script>
+
+</body>
+</html> 

@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="mainpassword.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<link rel="shortcut icon" href="brain.jpg" type="image/x-icon">
+
+<style>
+body {
+  font-family: "Lato", sans-serif;
+}
+
+/* Fixed sidenav, full height */
+.sidenav {
+  height: 100%;
+  width: 250px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+/* Style the sidenav links and the dropdown button */
+.sidenav a, .dropdown-btn {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #818181;
+  display: block;
+  border: none;
+  background: none;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  outline: none;
+}
+
+/* On mouse-over */
+.sidenav a:hover, .dropdown-btn:hover {
+  color: #f1f1f1;
+}
+
+/* Main content */
+.main {
+  margin-left: 250px; /* Same as the width of the sidenav */
+  font-size: 20px; /* Increased text to enable scrolling */
+  padding: 0px 10px;
+}
+
+/* Add an active class to the active dropdown button */
+.active {
+  background-color: green;
+  color: white;
+}
+
+/* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
+.dropdown-container {
+  display: none;
+  background-color: #262626;
+  padding-left: 8px;
+}
+
+/* Optional: Style the caret down icon */
+.fa-caret-down {
+  float: right;
+  padding-right: 8px;
+}
+
+/* Some media queries for responsiveness */
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+.blinking{
+    animation:blinkingText 1.2s infinite;
+}
+@keyframes blinkingText{
+    0%{     color: #000;    }
+    49%{    color: #000; }
+    60%{    color: transparent; }
+    99%{    color:transparent;  }
+    100%{   color: #000;    }
+}
+
+</style>
+<title>RECUERDO</title>
+</head>
+<body>
+
+<div class="sidenav">
+  <img src="brain.jpg" width="250px" height="150 px">
+  <a href="welcome.html">DASHBOARD</a>
+  
+  <a href="contacts.html">CONTACTS</a>
+  <button class="dropdown-btn">HOUSE
+    <i class="fa fa-caret-down"></i>
+  </button>
+  <div class="dropdown-container">
+    <a href="thakur.html">THAKUR</a>
+    <a href="dolil.html">DOLIL</a>
+    <a href="khajna.html">KHAJNA</a>
+    <a href="housetax.html">HOLDING-TAX</a>
+    <a href="key.html">KEY</a>
+    <a href="rent.html">RENT</a>
+    <button class="dropdown-btn">PUJA CHANDA
+        <i class="fa fa-caret-down"></i>
+      </button>
+    <div class="dropdown-container">
+      <a href="kalipuja.html">KALI PUJA</a>
+      <a href="durgapuja.html">DURGA PUJA</a>
+      
+    </div>
+    <button class="dropdown-btn">MAINTENANCE
+        <i class="fa fa-caret-down"></i>
+      </button>
+    <div class="dropdown-container">
+    <a href="wooden.html">WOODEN</a>
+    <a href="grill.html">GRILL</a>
+    <a href="civil.html">CIVIL</a>
+    <a href="plumber.html">PLUMBER</a>
+    <a href="electricity.html">ELECTRICITY</a>
+    
+    </div>    
+  </div>
+  <button class="dropdown-btn">FINANCIAL 
+    <i class="fa fa-caret-down"></i>
+  </button>
+  <div class="dropdown-container">
+    <a href="bank.html">BANK</a>
+    <a href="po.html">POST-OFFICE</a>
+    <a href="mf.html">MUTUAL FUND</a>
+    <a href="it.html">INCOME-TAX</a>
+    <a href="mpg.html">MPG-NCD</a>
+    <a href="ornaments.html">ORNAMENTS</a>
+    <a href="badd.html">BAD DEBT</a>
+    <a href="insurance.html">INSURANCE</a>
+    <a href="pension.html">PENSION</a>
+    <a href="earning.html">EARNING</a>
+    <a href="expances.html">EXPANCES</a>
+    <a href="planning.html">PLANNING</a>
+   </div>
+  <button class="dropdown-btn">MEDICAL 
+    <i class="fa fa-caret-down"></i>
+  </button>
+  <div class="dropdown-container">
+    <a href="hospital.html">HOSPITAL</a>
+    <a href="medicine.html">MEDICINE</a>
+    <a href="aid.html">FIRST AID KIT</a>
+  </div>
+  <button class="dropdown-btn">IDENTITY 
+    <i class="fa fa-caret-down"></i>
+  </button>
+  <div class="dropdown-container">
+    <a href="bc.html">BIRTH CERTIFICATE</a>
+    <a href="bg.html">BLOOD GROUP</a>
+    <a href="pan.html">PAN CARD</a>
+    <a href="aadhar.html">AADHAR CARD</a>
+    <a href="vc.html">VOTER CARD</a>
+    <a href="passport.html">PASSPORT</a>
+    <a href="dl.html">DRIVING LICENCE</a>
+    <a href="rc.html">RATION CARD</a>
+    <a href="sd.html">SCHOOL DOCS</a>
+    <a href="mc.html">MEMBERSHIP CARD</a>
+    <a href="pp.html">PASSPORT PHOTO</a>
+    <a href="dc.html">DEATH CERTIFICATE</a>
+  </div>
+  <button class="dropdown-btn">EX-SERVICE 
+    <i class="fa fa-caret-down"></i>
+  </button>
+  <div class="dropdown-container">
+    <a href="ma.html">MA</a>
+    <a href="baba.html">BABA</a>
+  </div>
+  <button class="dropdown-btn">FURNITURE 
+    <i class="fa fa-caret-down"></i>
+  </button>
+  <div class="dropdown-container">
+    <a href="electronic.html">ELECTRONIC</a>
+    <a href="nonelec.html">NON-ELECTRONIC</a>
+    <a href="vehicels.html">VEHICELS</a>
+    <a href="whatisinit.html">WHAT IS IN IT?</a>
+  </div>
+  <button class="dropdown-btn">LEGAL
+    <i class="fa fa-caret-down"></i>
+  </button>
+  <div class="dropdown-container">
+    <a href="loan.html">LOAN</a>
+    <a href="court.html">MY COURT CASES</a>
+    <a href="will.html">WILL</a>
+  </div>
+  <a href="p&v.html">PHOTOS & VIDEOS</a>
+   <a href="event.html">EVENTS</a>
+  <a href="researchs.html">RESEARCHS</a>
+  <br>
+  <br>
+  <a href="logout.html">LOG OUT</a>
+</div>
+
+<div class="main">
+  <br>
+  <h2><U><CENTER>RECUERDO</CENTER></U></h2>
+  <MARQUEE><FONT COLOR="RED">I AM VERY GLAD TO ANNOUNCE YOU THAT THIS SITE 100% HOSTING AND DOMAIN RENEWAL FREE, MEANS IT IS</FONT><FONT COLOR="green"><b> IMMORTAL SITE.</b></FONT></MARQUEE>
+  <hr>
+  <p align ="right">
+    <script>
+      var now = new Date();
+      document.write(now.toDateString());
+    </script></p>
+    
+    <p align ="right">
+      <script>
+        var n = new Date();
+      document.write(n.toLocaleTimeString());
+    
+    </script></p>
+  
+  
+  <font color="blue">THIS STATIC WEBSITE START ON : 01ST APRIL 2020</font><br>
+  
+  <font color="green">THIS WEBSITE IS LIKE MY MEMORY.THROUGH THIS WEBSITE I CAN REMEMBER ALL MY NECESSARY THINGS. </font><br>
+  <font color="red">Click the button to get your coordinates.</font>
+  
+  <button onclick="getLocation()">Try It</button>
+  
+  <p id="demo"></p>
+  
+  <script>
+var x = document.getElementById("demo");
+
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } else { 
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+
+function showPosition(position) {
+  x.innerHTML = "Latitude: " + position.coords.latitude + 
+  "<br>Longitude: " + position.coords.longitude;
+}
+</script>
+
+<font color="red">Click the button to get Google Map for any Direction.</font>
+<a href="https://www.google.com/maps/@?api=1&map_action=map&parametersclass="class="w3-button w3-black">Load Map</a><BR><br>
+  <font color="red">For Emergency calling (Access from only Mobile)</font><br>
+  
+  <a href="tel:+918927143032" class="btn btn-outline-primary"><abbr title="Press the button to call Mou">Call Mou</abbr></a>
+  <a href="tel:+918145755668" class="btn btn-outline-info"><abbr title="Press the button to call Baba">Call Baba</abbr></a>
+  <a href="tel:+916295448950"class="btn btn-outline-warning"><abbr title="Press the button to call Didi">Call Didi</abbr></a>
+  <a href="tel:+917001126991"class="btn btn-outline-danger"><abbr title="Press the button to call Jiju">Call Jiju</abbr></a><BR><BR>
+    <a href="tel:+918250227952"class="btn btn-outline-success"><abbr title="Press the button to call Apu">Call Apu</abbr></a>
+    <a href="tel:+919332014599"class="btn btn-outline-secondary"><abbr title="Press the button to call Sid">Call Sid</abbr></a>
+    <a href="tel:+918013791730"class="btn btn-outline-primary"><abbr title="Press the button to call Bari">Call Bari</abbr></a>
+    <a href="tel:+919475200084"class="btn btn-outline-dark"><abbr title="Press the button to call Bari Emg">Call Bari Emg</abbr></a><br><br>
+    
+    <font color="red">For Emergency SMS (Access from only Mobile)</font><br>
+    <font color="green">Send Text Message :   </font>
+    
+    <a href="sms:+918927143032?body=THIS IS AN EMERGENCY....(TYPE YOUR MASSAGES)" class="btn btn-primary">Mou</a>
+    
+    <a href="sms:+916295448950?body=THIS IS AN EMERGENCY....(TYPE YOUR MASSAGES)"class="btn btn-success">Didi</a>
+    
+    <a href="sms:+917001126991?body=THIS IS AN EMERGENCY....(TYPE YOUR MASSAGES)"class="btn btn-warning">Jiju</a>
+    
+    <a href="sms:+918250227952?body=THIS IS AN EMERGENCY....(TYPE YOUR MASSAGES)"class="btn btn-info">Apu</a><BR><br><br>
+      
+      <font color="green">WhatsApp: (Access from only Mobile) </font>
+      <button onclick="window.open('whatsapp://send?text=Hey! Type your massage...')"> Open WhatsApp </button>  <br><br>
+      
+      
+      Weather Forecast <!-- weather widget start --><a target="_blank" href="https://www.booked.net/weather/durgapur-38232">
+        <img src="https://w.bookcdn.com/weather/picture/28_38232_1_1_e67e22_250_d35401_ffffff_ffffff_1_2071c9_ffffff_0_6.png?scode=124&domid=w209&anc_id=75348" alt="booked.net"/>
+      </a><!-- weather widget end -->
+      <br>
+      <br><br>
+      <hr>
+      <p style="font-size: 10px;" align="right"><span class="blinking">Version 1.0.2</span></p>
+      <center> <p style="font-size: 13px;">&copy;2021-22 All Rights Reserved by Recuerdo</p>
+      </center> 
+      
+    </div>
+      
+      
+      <script src="dropdown.js">  </script>
+<!-- jQuery CDN - Slim version (=without AJAX) -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<!-- Popper.JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+<!-- Bootstrap JS -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#sidebarCollapse').on('click', function () {
+            $('#sidebar').toggleClass('active');
+            $(this).toggleClass('active');
+        });
+    });
+</script>
+
+</body>
+</html> 

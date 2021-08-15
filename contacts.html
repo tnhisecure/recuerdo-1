@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script src="allpassword.js">
+
+  </script>
+  <link rel="shortcut icon" href="brain.jpg" type="image/x-icon">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css">
+  <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+  <script src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $('#customers').DataTable();
+    });
+  </script>
+  <style>
+    body {
+      font-family: "Lato", sans-serif;
+    }
+
+    /* Fixed sidenav, full height */
+    .sidenav {
+      height: 100%;
+      width: 250px;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      background-color: #111;
+      overflow-x: hidden;
+      padding-top: 20px;
+    }
+
+    /* Style the sidenav links and the dropdown button */
+    .sidenav a,
+    .dropdown-btn {
+      padding: 6px 8px 6px 16px;
+      text-decoration: none;
+      font-size: 20px;
+      color: #818181;
+      display: block;
+      border: none;
+      background: none;
+      width: 100%;
+      text-align: left;
+      cursor: pointer;
+      outline: none;
+    }
+
+    /* On mouse-over */
+    .sidenav a:hover,
+    .dropdown-btn:hover {
+      color: #f1f1f1;
+    }
+
+    /* Main content */
+    .main {
+      margin-left: 250px;
+      /* Same as the width of the sidenav */
+      font-size: 20px;
+      /* Increased text to enable scrolling */
+      padding: 0px 10px;
+    }
+
+    /* Add an active class to the active dropdown button */
+    .active {
+      background-color: green;
+      color: white;
+    }
+
+    /* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
+    .dropdown-container {
+      display: none;
+      background-color: #262626;
+      padding-left: 8px;
+    }
+
+    /* Optional: Style the caret down icon */
+    .fa-caret-down {
+      float: right;
+      padding-right: 8px;
+    }
+
+    /* Some media queries for responsiveness */
+    @media screen and (max-height: 450px) {
+      .sidenav {
+        padding-top: 15px;
+      }
+
+      .sidenav a {
+        font-size: 18px;
+      }
+    }
+
+    #customers {
+      font-family: Arial, Helvetica, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    #customers td,
+    #customers th {
+      border: 1px solid #ddd;
+      padding: 8px;
+    }
+
+    #customers tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+
+    #customers tr:hover {
+      background-color: #ddd;
+    }
+
+    #customers th {
+      padding-top: 12px;
+      padding-bottom: 12px;
+      text-align: left;
+      background-color: #04AA6D;
+      color: white;
+    }
+
+    .blinking {
+      animation: blinkingText 1.2s infinite;
+    }
+
+    @keyframes blinkingText {
+      0% {
+        color: #000;
+      }
+
+      49% {
+        color: #000;
+      }
+
+      60% {
+        color: transparent;
+      }
+
+      99% {
+        color: transparent;
+      }
+
+      100% {
+        color: #000;
+      }
+    }
+
+    .button {
+
+      display: inline-block;
+      padding: 10px 20px;
+      font-size: 15px;
+      cursor: pointer;
+      text-align: center;
+      text-decoration: none;
+      outline: none;
+      color: #fff;
+      background-color: #04AA6D;
+      border: none;
+      border-radius: 15px;
+      box-shadow: 0 9px #999;
+    }
+
+    .button:hover {
+      background-color: #8e8d3e
+    }
+
+    .button:active {
+      background-color: #04AA6D;
+      box-shadow: 0 5px #666;
+      transform: translateY(4px);
+    }
+  </style>
+  <title>RECUERDO</title>
+</head>
+
+<body>
+
+  <div class="sidenav">
+    <img src="brain.jpg" width="250px" height="150 px">
+    <a href="welcome.html">DASHBOARD</a>
+
+    <a href="contacts.html">CONTACTS</a>
+    <button class="dropdown-btn">HOUSE
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-container">
+      <a href="thakur.html">THAKUR</a>
+      <a href="dolil.html">DOLIL</a>
+      <a href="khajna.html">KHAJNA</a>
+      <a href="housetax.html">HOLDING-TAX</a>
+      <a href="key.html">KEY</a>
+      <a href="rent.html">RENT</a>
+      <button class="dropdown-btn">PUJA CHANDA
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-container">
+        <a href="kalipuja.html">KALI PUJA</a>
+        <a href="durgapuja.html">DURGA PUJA</a>
+
+      </div>
+      <button class="dropdown-btn">MAINTENANCE
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-container">
+        <a href="wooden.html">WOODEN</a>
+        <a href="grill.html">GRILL</a>
+        <a href="civil.html">CIVIL</a>
+        <a href="plumber.html">PLUMBER</a>
+        <a href="electricity.html">ELECTRICITY</a>
+
+      </div>
+    </div>
+    <button class="dropdown-btn">FINANCIAL
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-container">
+      <a href="bank.html">BANK</a>
+      <a href="po.html">POST-OFFICE</a>
+      <a href="mf.html">MUTUAL FUND</a>
+      <a href="it.html">INCOME-TAX</a>
+      <a href="mpg.html">MPG-NCD</a>
+      <a href="ornaments.html">ORNAMENTS</a>
+      <a href="badd.html">BAD DEBT</a>
+      <a href="insurance.html">INSURANCE</a>
+      <a href="pension.html">PENSION</a>
+      <a href="earning.html">EARNING</a>
+      <a href="expances.html">EXPANCES</a>
+      <a href="planning.html">PLANNING</a>
+    </div>
+    <button class="dropdown-btn">MEDICAL
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-container">
+      <a href="hospital.html">HOSPITAL</a>
+      <a href="medicine.html">MEDICINE</a>
+      <a href="aid.html">FIRST AID KIT</a>
+    </div>
+    <button class="dropdown-btn">IDENTITY
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-container">
+      <a href="bc.html">BIRTH CERTIFICATE</a>
+      <a href="bg.html">BLOOD GROUP</a>
+      <a href="pan.html">PAN CARD</a>
+      <a href="aadhar.html">AADHAR CARD</a>
+      <a href="vc.html">VOTER CARD</a>
+      <a href="passport.html">PASSPORT</a>
+      <a href="dl.html">DRIVING LICENCE</a>
+      <a href="rc.html">RATION CARD</a>
+      <a href="sd.html">SCHOOL DOCS</a>
+      <a href="mc.html">MEMBERSHIP CARD</a>
+      <a href="pp.html">PASSPORT PHOTO</a>
+      <a href="dc.html">DEATH CERTIFICATE</a>
+    </div>
+    <button class="dropdown-btn">EX-SERVICE
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-container">
+      <a href="ma.html">MA</a>
+      <a href="baba.html">BABA</a>
+    </div>
+    <button class="dropdown-btn">FURNITURE
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-container">
+      <a href="electronic.html">ELECTRONIC</a>
+      <a href="nonelec.html">NON-ELECTRONIC</a>
+      <a href="vehicels.html">VEHICELS</a>
+      <a href="whatisinit.html">WHAT IS IN IT?</a>
+    </div>
+    <button class="dropdown-btn">LEGAL
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-container">
+      <a href="loan.html">LOAN</a>
+      <a href="court.html">MY COURT CASES</a>
+      <a href="will.html">WILL</a>
+    </div>
+    <a href="p&v.html">PHOTOS & VIDEOS</a>
+    <a href="event.html">EVENTS</a>
+    <a href="researchs.html">RESEARCHS</a>
+    <br>
+    <br>
+    <a href="logout.html">LOG OUT</a>
+  </div>
+
+  <div class="main">
+    <h2><U>
+        <CENTER>RECUERDO</CENTER>
+      </U></h2>
+    <MARQUEE>
+      <FONT COLOR="RED">I AM VERY GLAD TO ANNOUNCE YOU THAT THIS SITE 100% HOSTING AND DOMAIN RENEWAL FREE, MEANS
+        IT IS</FONT>
+      <FONT COLOR="green"><b> IMMORTAL SITE.</b></FONT>
+    </MARQUEE>
+    <hr>
+    <img src="contact.jpg" height=300px width=100%><br>
+    <br>
+    <CENTER><U>ALL IMPORTANT NUMBERS</U></CENTER> <BR><BR>
+    <table id="customers" class="display" style="width:100%">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Mobile No.</th>
+          <th>Alternate No.</th>
+          <th>Mail ID</th>
+
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Jayanta Dutta (Apu)</td>
+          <td><a href="tel:+918250227952">8250227952</a></td>
+          <td><a href="tel:+919332014599">9332014599</a></td>
+          <td><a href="mailto:jdofficialmailid@gmail.com?subject = Feedback&body = Message">
+              jdofficialmailid@gmail.com
+            </a></td>
+        </tr>
+        <tr>
+          <td>Manoranjan Dutta (Baba)</td>
+          <td><a href="tel:+919333261663">9333261663</a></td>
+          <td><a href="tel:+918145755668">8145755668</a></td>
+          <td><a href="mailto:manoranjandgp@gmail.com?subject = Feedback&body = Message">manoranjandgp@gmail.com</a>
+          </td>
+        </tr>
+        <tr>
+          <td>Bari</td>
+          <td><a href="tel:+919475200084">9475200084</a></td>
+          <td><a href="tel:+918013791730">8013791730</a></td>
+          <td><a href="mailto:jayntadutta@gmail.com?subject = Feedback&body = Message">jayntadutta@gmail.com</a></td>
+        </tr>
+        <tr>
+          <td>Kanchan Dutta (Jiju)</td>
+          <td><a href="tel:+917001126991">7001126991</a></td>
+          <td><a href="tel:+919434533530">9434533530</a></td>
+          <td><a
+              href="mailto:kanchanduttateacher@gmail.com?subject = Feedback&body = Message">kanchanduttateacher@gmail.com</a>
+          </td>
+        </tr>
+        <tr>
+          <td>Shraboni Dutta (Didi)</td>
+          <td><a href="tel:+916295448950">6295448950</a></td>
+          <td></td>
+          <td><a href="mailto:shrabonidgr@gmail.com?subject = Feedback&body = Message">shrabonidgr@gmail.com</a></td>
+        </tr>
+        <tr>
+          <td>Sutapa Saha (Mou)</td>
+          <td><a href="tel:+918927143032">8927143032</a></td>
+          <td><a href="tel:+918637001612">8637001612</a></td>
+          <td><a href="mailto:sutapababu1986@gmail.com?subject = Feedback&body = Message">sutapababu1986@gmail.com</a>
+          </td>
+        </tr>
+        <tr>
+          <td>Siddharta Mondal (Babu)</td>
+          <td><a href="tel:+919002477810">9002477810</a></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Chabbi Saha (Mou Ma)</td>
+          <td><a href="tel:+919434078031">9434078031</a></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Uttam Kumar Singh</td>
+          <td><a href="tel:+917865030341">7865030341</a></td>
+          <td><a href="tel:+919093503031">9093503031</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Manu Da</td>
+          <td><a href="tel:+919474545088">9474545088</a></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Tapan Da(Manu da P.O)</td>
+          <td><a href="tel:+919932908108">9932908108</a></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Dilip-pisi</td>
+          <td><a href="tel:+918101420819">8101420819</a></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Milan-pisi</td>
+          <td><a href="tel:+919832914157">9832914157</a></td>
+          <td><a href="tel:+918918015813">8918015813</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Sharma ji(Debendra)</td>
+          <td><a href="tel:+917908341408">7908341408</a></td>
+          <td><a href="tel:+919233242955">9233242955</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Plumber Deva </td>
+          <td><a href="tel:+919933567119">9933567119</a></td>
+          <td></td>
+          <td></td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <th>Name</th>
+          <th>Mobile No.</th>
+          <th>Alternate No.</th>
+          <th>Mail ID</th>
+
+        </tr>
+      </tfoot>
+    </table>
+
+
+    <br><br>
+    &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
+    <input type="button" class="button" value="Print Table" onclick="myApp.printTable()" />
+    &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
+    &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
+    &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
+    &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
+    &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
+    &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
+    &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
+    <input type="button" class="button" value="Print Table" onclick="myApp.printTable()" />
+    </p>
+    <br><br>
+    <hr>
+    <p style="font-size: 10px;" align="right"><span class="blinking">Version 1.0.2</span></p>
+
+    <center>
+      <p style="font-size: 13px;">&copy;2021-22 All Rights Reserved by Recuerdo</p>
+    </center>
+
+  </div>
+
+  <script src="dropdown.js"></script>
+
+</body>
+
+<script>
+  var myApp = new function () {
+    this.printTable = function () {
+      var customers = document.getElementById('customers');
+      var win = window.open('', '', 'height=700,width=700');
+      win.document.write(customers.outerHTML);
+      win.document.close();
+      win.print();
+    }
+  }
+</script>
+
+
+</html>
