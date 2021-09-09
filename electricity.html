@@ -1,11 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <script src="allpassword.js"></script>
+  <script src="allpassword.js">
+
+  </script>
   <link rel="shortcut icon" href="brain.jpg" type="image/x-icon">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<style>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css">
+  <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+  <script src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $('#customers').DataTable();
+    });
+  </script>
+  <style>
 body {
   font-family: "Lato", sans-serif;
 }
@@ -71,20 +82,95 @@ body {
 
 /* Some media queries for responsiveness */
 @media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
-}
-.blinking{
-    animation:blinkingText 1.2s infinite;
-}
-@keyframes blinkingText{
-    0%{     color: #000;    }
-    49%{    color: #000; }
-    60%{    color: transparent; }
-    99%{    color:transparent;  }
-    100%{   color: #000;    }
-}
-</style>
+      .sidenav {
+        padding-top: 15px;
+      }
+
+      .sidenav a {
+        font-size: 18px;
+      }
+    }
+
+    #customers {
+      font-family: Arial, Helvetica, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    #customers td,
+    #customers th {
+      border: 1px solid #ddd;
+      padding: 8px;
+    }
+
+    #customers tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+
+    #customers tr:hover {
+      background-color: #ddd;
+    }
+
+    #customers th {
+      padding-top: 12px;
+      padding-bottom: 12px;
+      text-align: left;
+      background-color: #7604aa;
+      color: white;
+    }
+
+    .blinking {
+      animation: blinkingText 1.2s infinite;
+    }
+
+    @keyframes blinkingText {
+      0% {
+        color: #000;
+      }
+
+      49% {
+        color: #000;
+      }
+
+      60% {
+        color: transparent;
+      }
+
+      99% {
+        color: transparent;
+      }
+
+      100% {
+        color: #000;
+      }
+    }
+
+    .button {
+
+      display: inline-block;
+      padding: 10px 20px;
+      font-size: 15px;
+      cursor: pointer;
+      text-align: center;
+      text-decoration: none;
+      outline: none;
+      color: #fff;
+      background-color: #04AA6D;
+      border: none;
+      border-radius: 15px;
+      box-shadow: 0 9px #999;
+    }
+
+    .button:hover {
+      background-color: #8e8d3e
+    }
+
+    .button:active {
+      background-color: #04AA6D;
+      box-shadow: 0 5px #666;
+      transform: translateY(4px);
+    }
+  </style>
 <title>RECUERDO</title>
 </head>
 <body>
@@ -213,15 +299,120 @@ body {
     <A HREF="https://www.wbsedcl.in/irj/go/km/docs/internet/new_website/Consumer_Login.html">CLICK HERE</A> FOR ONLINE PAYMENT<BR><BR>
     
     <A HREF="WBSEDCL-converted_protected.pdf">REQUIRED INFO</A><br><br>
-    <br><br>
-  <hr>
-  <p style="font-size: 10px;" align="right"><span class="blinking">Version 1.0.2</span></p>
+    <br>
+    <CENTER><U>PAYMENT HISTORY</U></CENTER> <BR><BR>
+    <table id="customers" class="display" style="width:100%">
+      <thead>
+        <tr>
+          <th>BILL MONTH</th>
+          <th>INVOICE NO.</th>
+          <th>AMOUNT</th>
+          <th>PAY REF</th>
+          <th>TRANSACTION NO</th>
+          <th>RECIEPT TYPE</th>
+          <th>PAYMENT DATE</th>
+          <th>VIEW RECEIPT</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>DEC2020-FEB2021</td>
+          <td>458007168075</td>
+          <td>5072.0</td>
+          <td>M-PAYMENT</td>
+          <td>PHNN2011301110423196725367</td>
+          <td>PAYMENT RECEIPR</td>
+          <td>2020.11.30</td>
+          <td><a href="PHNN2011301110423196725367.pdf">PDF</a></td>
+          
+        </tr>
+        
+          <tr>
+            <td>MAR2021-MAY2021</td>
+            <td>412012546153</td>
+            <td>1134.0</td>
+            <td>E-PAYMENT</td>
+            <td>VHMP9794795931</td>
+            <td>PAYMENT RECEIPR</td>
+            <td>2021.03.02</td>
+            <td><a href="VHMP9794795931.pdf">PDF</a></td>
+            
+          </tr>
+          <tr>
+            <td>JUN2021-AUG2021</td>
+            <td>544002830730</td>
+            <td>1988.0</td>
+            <td>E-PAYMENT</td>
+            <td>VHMP9993470362</td>
+            <td>PAYMENT RECEIPR</td>
+            <td>2021.05.25</td>
+            <td><a href="VHMP9993470362.pdf">PDF</a></td>
+            
+          </tr>
+          <tr>
+            <td>SEP2021-NOV2021</td>
+            <td>468005338436</td>
+            <td>10464.0</td>
+            <td>E-PAYMENT</td>
+            <td>BBPSPP011239967OAFNLFQ2L</td>
+            <td>PAYMENT RECEIPR</td>
+            <td>2021.08.27</td>
+            <td><a href="BBPSPP011239967OAFNLFQ2L.pdf">PDF</a></td>
+            
+          </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <th>BILL MONTH</th>
+          <th>INVOICE NO.</th>
+          <th>AMOUNT</th>
+          <th>PAY REF</th>
+          <th>TRANSACTION NO</th>
+          <th>RECIEPT TYPE</th>
+          <th>PAYMENT DATE</th>
+          <th>VIEW RECEIPT</th>
+        </tr>
+      </tfoot>
+    </table>
 
-  <center>
-    <p style="font-size: 13px;">&copy;2021-22 All Rights Reserved by Recuerdo</p>
-  </center>
-</div>
-<script src="dropdown.js"></script>
+
+    <br><br>
+    &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
+    <input type="button" class="button" value="Print Table" onclick="myApp.printTable()" />
+    &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
+    &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
+    &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
+    &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
+    &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
+    &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
+    &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
+    <input type="button" class="button" value="Print Table" onclick="myApp.printTable()" />
+    </p>
+    <br><br>
+    <hr>
+    <p style="font-size: 10px;" align="right"><span class="blinking">Version 1.0.2</span></p>
+
+    <center>
+      <p style="font-size: 13px;">&copy;2021-22 All Rights Reserved by Recuerdo</p>
+    </center>
+
+  </div>
+
+  <script src="dropdown.js"></script>
 
 </body>
-</html> 
+
+<script>
+  var myApp = new function () {
+    this.printTable = function () {
+      var customers = document.getElementById('customers');
+      var win = window.open('', '', 'height=700,width=700');
+      win.document.write(customers.outerHTML);
+      win.document.close();
+      win.print();
+    }
+  }
+</script>
+
+
+</html>
