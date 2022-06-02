@@ -389,4 +389,15 @@
 </div>
 <script src="dropdown.js"></script>
 </body>
+    <script>
+  var myApp = new function () {
+    this.printTable = function () {
+      var customers = document.getElementById('customers');
+      var win = window.open('', '', 'height=700,width=700');
+      win.document.write(customers.outerHTML);
+      win.document.close();
+      win.print();
+    }
+  }
+</script>
 </html> 
